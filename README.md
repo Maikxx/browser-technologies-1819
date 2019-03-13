@@ -105,11 +105,21 @@ I have kept in mind the slow API of the OBA when fetching book suggestions with 
 
 ##### Cookies
 
-I don't use cookies in this application, which is the reason why turning off cookies does not cause any issues.
+I don't use cookies in this application, however, this application uses localStorage as can be seen in the section below, which causes a bit of trouble when turning off cookies (which is bound to localStorage, for some reason).
 
 ##### LocalStorage
 
-When turning off the localStorage (by turning off cookies), the page loads as usual, it also navigates as usual to the second page, but when navigating to the third page everything breaks. This is caused by the fact that localStorage access is disallowed, where JavaScript is looking for it. Because there is a `try/catch` block surrounding the localStorage pieces, it enters the `catch` block. Ideally you would continue fetching data in the catch block, when the localStorage is not available.
+When turning off the localStorage (by turning off cookies), the page loads as usual, it also navigates as usual to the second page, but when navigating to the third page everything breaks. This is caused by the fact that localStorage access is disallowed, where JavaScript is looking for it. Because there is a `try/catch` block surrounding the localStorage pieces, it enters the `catch` block. Ideally you would continue fetching data in the `catch` block, when the `localStorage` is not available.
+
+#### Screen reader test
+
+You can activate the MacOS screen reader with `CMD + Option + F5`.
+
+Since refactoring the maps markers to be `button` elements instead of `div` elements, the screen reader is able to walk through this part of the application.
+
+As could be seen in the screenshots above, the accesibility score is pretty high, due to semantic setup of the pages, with a few exceptions that are discussed above.
+
+It appears to be pretty much not necessary to use ARIA attributes on most of the pages, with maybe the exception of the floorplan svg elements.
 
 ## License
 
