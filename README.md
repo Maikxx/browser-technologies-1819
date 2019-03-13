@@ -17,6 +17,10 @@
 
 The link to the repository (with the enhanced code) for this exercise can be found [here](https://github.com/Maikxx/project-1-1819).
 
+When I first ran the audits test in Google Chrome on a 13inch MacBook from 2015, the results were pretty shocking, as can be seen below.
+
+![Initial test results](./docs/assets/initial-test-results.png)
+
 ## License
 
 This repository is licensed as [MIT](LICENSE) by [Maikel van Veen](https://github.com/maikxx).
