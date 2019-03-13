@@ -50,6 +50,43 @@ A simple improvement that can be made here is to fix the `alt="undefined"` to be
 
 ![Enhanced images](./docs/assets/enhanced-images.png)
 
+##### Custom fonts
+
+This test is pretty easy, since there will not change anything to the interface when disabling custom fonts, since this application does not make use of custom fonts. If I were to be using custom fonts, I would have fallen back to another font because of this:  `font-family: Arial, Helvetica, sans-serif;`.
+
+##### JavaScript
+
+When disabling JavaScript, it is simple, just a white page is shown, since everything is rendered into the `main` element from JavaScript.
+This can be solved (which I am not going to do right now, because that is an issue for the other course) is to render the application on the server and send it to the client. This would show a lot of the content just fine, with the exeption for the map on the homepage.
+
+As far as page navigation goes, nothing will work either right now, since I am using buttons to push the history state, while if I were to use anchor tags, with server side rendering a lot more of the pages would work.
+
+##### Color
+
+On MacOS, you can invert the colors by pressing `CMD + Option + F5`.
+My application works surpisingly well, seeing as I didn't spend any time in this mode while designing.
+There only appears an issue when watching the floorplans, where the toilets and elevators are hard to see against the background.
+
+I tried to make screenshots from this, however to my (dumb) surprise screenshots from this mode are not taken in the inverted mode. You will need to test it out yourself in the live version to view it.
+
+##### Mouse / Trackpad
+
+When not using the mouse, I cannot navigate to the next page each time, since the dots on the map are `div`s instead of `button`s.
+
+This can be fixed on the first page, however the second page contains a more difficult task to improve this, since the `polygon` shapes have an event listener on them. If you know anything about HTML, you know that you can't **directly** append a `button` to an `svg` element.
+
+You could solve this by doing something like this:
+
+```html
+<foreignObject>
+    <html:button></html:button>
+</foreignObject>
+```
+
+This however would require additional positioning, which I will not do right now, but it is possible.
+
+The final page with all the suggestions works fine without a mouse or trackpad.
+
 ## License
 
 This repository is licensed as [MIT](LICENSE) by [Maikel van Veen](https://github.com/maikxx).
