@@ -2,9 +2,19 @@
 
 ## Table of Contents
 
-1. [Installation](#installation)
-2. [Exercises](#exercises)
-3. [License](#license)
+1. [Installation](#Installation)
+2. [Exercises](#Exercises)
+    1. [Exercise 1.2](#Exercise-1.2)
+        1. [Feature tests and solutions](#Feature-tests-and-solutions)
+            1. [Images](#Images)
+            2. [Custom fonts](#Custom-fonts)
+            3. [JavaScript](#JavaScript)
+            4. [Color](#Color)
+            5. [Mouse / Trackpad](#Mouse-/-Trackpad)
+            6. [Broadband](#Broadband)
+            7. [Cookies](#Cookies)
+            8. [LocalStorage](#LocalStorage)
+3. [License](#License)
 
 ### Install
 
@@ -17,7 +27,7 @@
 
 The link to the repository for this exercise can be found [here](https://github.com/Maikxx/project-1-1819).
 
-#### Feature tests
+#### Feature tests and solutions
 
 ##### Images
 
@@ -92,6 +102,14 @@ This however broke MapBox, because it couldn't recognize that it's required styl
 The only way to further improve the performance is to fetch all data on the server and just send the rendered page back to the user.
 
 I have kept in mind the slow API of the OBA when fetching book suggestions with a loader though.
+
+##### Cookies
+
+I don't use cookies in this application, which is the reason why turning off cookies does not cause any issues.
+
+##### LocalStorage
+
+When turning off the localStorage (by turning off cookies), the page loads as usual, it also navigates as usual to the second page, but when navigating to the third page everything breaks. This is caused by the fact that localStorage access is disallowed, where JavaScript is looking for it. Because there is a `try/catch` block surrounding the localStorage pieces, it enters the `catch` block. Ideally you would continue fetching data in the catch block, when the localStorage is not available.
 
 ## License
 
