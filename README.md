@@ -15,23 +15,7 @@
 
 ### Exercise 1.2
 
-The link to the repository (with the enhanced code) for this exercise can be found [here](https://github.com/Maikxx/project-1-1819).
-
-When I first ran the audits test in Google Chrome on a 13inch MacBook from 2015, the results were pretty shocking, as can be seen below.
-
-![Initial test results](./docs/assets/initial-test-results.png)
-
-However, when looking into the issues that it gave me in the audits tab, I realized I was testing the local development version, which has no compression and minification.
-
-The live test results (from [Netlify](https://minor-web-project-1.netlify.com/)) can be seen below.
-
-![Live test results](./docs/assets/live-test-results.png)
-
-The main issue that can be seen here is that the MapBox css stylesheet is blocking the render flow (0.15s), and that it takes about 3.2 seconds before the page displays meaningful content, due to the fact that everything is rendered with JavaScript, which first needs to be parsed and executed.
-
-Modified this code `<link href="https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css" rel="preconnect">` to have `rel="preconnect"` instead of `rel="stylesheet"`.
-
-This however broke MapBox, because it couldn't recognize that it's required stylesheet was loaded in.
+The link to the repository for this exercise can be found [here](https://github.com/Maikxx/project-1-1819).
 
 #### Feature tests
 
@@ -86,6 +70,28 @@ You could solve this by doing something like this:
 This however would require additional positioning, which I will not do right now, but it is possible.
 
 The final page with all the suggestions works fine without a mouse or trackpad.
+
+##### Broadband
+
+When I first ran the audits test in Google Chrome on a 13inch MacBook from 2015, the results were pretty shocking, as can be seen below.
+
+![Initial test results](./docs/assets/initial-test-results.png)
+
+However, when looking into the issues that it gave me in the audits tab, I realized I was testing the local development version, which has no compression and minification.
+
+The live test results (from [Netlify](https://minor-web-project-1.netlify.com/)) can be seen below.
+
+![Live test results](./docs/assets/live-test-results.png)
+
+The main issue that can be seen here is that the MapBox css stylesheet is blocking the render flow (0.15s), and that it takes about 3.2 seconds before the page displays meaningful content, due to the fact that everything is rendered with JavaScript, which first needs to be parsed and executed.
+
+Modified this code `<link href="https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css" rel="preconnect">` to have `rel="preconnect"` instead of `rel="stylesheet"`.
+
+This however broke MapBox, because it couldn't recognize that it's required stylesheet was loaded in.
+
+The only way to further improve the performance is to fetch all data on the server and just send the rendered page back to the user.
+
+I have kept in mind the slow API of the OBA when fetching book suggestions with a loader though.
 
 ## License
 
