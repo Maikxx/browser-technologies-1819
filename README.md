@@ -19,7 +19,8 @@
         2. [Screen reader test](#Screen-reader-test)
         3. [Device lab test](#Device-lab-test)
     2. [Exercise 2](#Exercise-2)
-        1. [Nice to haves](#Nice-to-haves)
+        1. [Technologies used](#Technologies-used)
+            1. [CSS](#CSS)
 3. [Todos](#Todos)
 4. [License](#License)
 
@@ -146,9 +147,14 @@ TODO
 
 ![Wireflow](./docs/assets/wireflow.jpg)
 
-#### Nice to haves
+#### Technologies used
 
-* Adding more than 4 options.
+##### CSS
+
+* [VW/VH Unit](https://developer.mozilla.org/en-US/docs/Web/CSS/length).
+    [Supported from IE9, Safari 6, Firefox 19, Google Chrome 20](https://caniuse.com/#search=vw).
+* [CH Unit](https://developer.mozilla.org/en-US/docs/Web/CSS/length).
+    [Supported from IE9, Safari 6.0.2, Google Chrome 25](https://www.quirksmode.org/css/units-values/#t00).
 
 ## Todos
 

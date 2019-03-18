@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <% include ../partials/head %>
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
     </head>
     <body>
         <main>
@@ -13,43 +14,51 @@
                 <form
                     action="/create-room"
                     method="POST"
+                    class="QuestionForm"
                     enctype="application/x-www-form-urlencoded"
                 >
-                    <fieldset>
-                        <legend>Enter a question to ask to your students</legend>
+                    <fieldset class="QuestionForm__fieldset">
+                        <legend class="QuestionForm__legend">
+                            Enter a question to ask to your students
+                        </legend>
 
-                        <label for="question">Question</label>
+                        <label for="question" class="QuestionForm__label">Question</label>
                         <input
                             type="text"
                             name="question"
                             id="question"
                             placeholder="What is your opinion on dinosaurs?"
+                            class="QuestionForm__input Input"
                         >
 
-                        <label for="option-1">Options</label>
+                        <label for="option-1" class="QuestionForm__label">Options</label>
                         <input
                             type="text"
                             name="option-1"
                             id="option-1"
                             placeholder="A very nice option here"
+                            class="QuestionForm__input Input"
                         >
                         <input
                             type="text"
                             name="option-2"
                             id="option-2"
                             placeholder="A very nice option here"
+                            class="QuestionForm__input Input"
                         >
                         <input
                             type="text"
                             name="option-3"
                             id="option-3"
                             placeholder="A very nice option here"
+                            class="QuestionForm__input Input"
                         >
                         <input
                             type="text"
                             name="option-4"
                             id="option-4"
                             placeholder="A very nice option here"
+                            class="QuestionForm__input Input"
                         >
                     </fieldset>
 

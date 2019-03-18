@@ -23,9 +23,9 @@ body {
 
 body {
     display: flex;
-    overflow-x: hidden;
     line-height: 1;
     background-color: #FFFFFF;
+    overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -33,6 +33,7 @@ body main {
     display: flex;
     flex-direction: column;
     flex: 1 0;
+    padding: 1rem;
 }
 
 label,
@@ -78,4 +79,13 @@ q::after {
 
 fieldset {
     border: 0;
+}
+
+.Input {
+    display: block;
+    font-size: 1.2em;
+    padding: .25em .5em;
+    width: 30em;
+    width: 60ch;
+    border: 1px solid #000000;
 }
