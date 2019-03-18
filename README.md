@@ -17,7 +17,8 @@
         2. [Screen reader test](#Screen-reader-test)
         3. [Device lab test](#Device-lab-test)
     2. [Exercise 2](#Exercise-2)
-3. [License](#License)
+3. [Todos](#Todos)
+4. [License](#License)
 
 ### Install
 
@@ -131,6 +132,14 @@ TODO
 ### Exercise 2
 
 ![Wireflow](./docs/assets/wireflow.jpg)
+
+## Todos
+
+* Add cache to the routes.
+* Add CSS to the application.
+* Add JavaScript to the application.
+* Add Sockets for real-time aspect, when supported.
+* Implement all functionality (Adding more options etc.).
 
 ## License
 
