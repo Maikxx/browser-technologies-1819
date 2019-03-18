@@ -17,6 +17,7 @@
         2. [Screen reader test](#Screen-reader-test)
         3. [Device lab test](#Device-lab-test)
     2. [Exercise 2](#Exercise-2)
+        1. [Nice to haves](#Nice-to-haves)
 3. [Todos](#Todos)
 4. [License](#License)
 
@@ -133,6 +134,10 @@ TODO
 
 ![Wireflow](./docs/assets/wireflow.jpg)
 
+#### Nice to haves
+
+* Adding more than 4 options.
+
 ## Todos
 
 * Add cache to the routes.
@@ -140,6 +145,7 @@ TODO
 * Add JavaScript to the application.
 * Add Sockets for real-time aspect, when supported.
 * Implement all functionality (Adding more options etc.).
+* Add a database (PostgreSQL?) to store room data, like the question, options and scores for each option.
 
 ## License
 
