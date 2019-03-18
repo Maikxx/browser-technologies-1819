@@ -3,6 +3,8 @@
 ## Table of Contents
 
 1. [Installation](#Installation)
+    1. [Pre-install](#Pre-install)
+    2. [Install](#Install)
 2. [Exercises](#Exercises)
     1. [Exercise 1.2](#Exercise-1.2)
         1. [Feature tests and solutions](#Feature-tests-and-solutions)
@@ -21,10 +23,20 @@
 3. [Todos](#Todos)
 4. [License](#License)
 
+### Installation
+
+### Pre-install
+
+* Make sure to install [yarn](https://yarnpkg.com/en/) or [npm](https://www.npmjs.com).
+* Make sure the **port** specified in the [index.ts](server/src/index.ts) is available (defaults to 3000).
+
 ### Install
 
 * Clone the repository: `git clone git@github.com:Maikxx/browser-technologies-1819.git`.
 * Navigate into the directory: `cd browser-technologies-1819`.
+* Install dependencies: `yarn` or `npm install`.
+* Start the client with: `yarn start-client` or `npm run start-client`.
+* Start the server with: `yarn start-server` or `npm run start-server`.
 
 ## Exercises
 
