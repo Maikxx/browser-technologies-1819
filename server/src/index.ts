@@ -14,7 +14,7 @@ import { cache } from './services/memoryCache'
     app.set('view engine', 'ejs')
     app.set('views', path.join(__dirname, 'views'))
 
-    app.get('/', cache(50), getIndexRoute())
+    app.get('/', cache(50), getIndexRoute)
     app.get('*', cache(5), getErrorRoute)
 
     app.listen(({ port: process.env.PORT || 3000 }), () => {
