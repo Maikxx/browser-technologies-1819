@@ -14,6 +14,9 @@
             6. [Broadband](#Broadband)
             7. [Cookies](#Cookies)
             8. [LocalStorage](#LocalStorage)
+        2. [Screen reader test](#Screen-reader-test)
+        3. [Device lab test](#Device-lab-test)
+    2. [Exercise 2](#Exercise-2)
 3. [License](#License)
 
 ### Install
@@ -120,6 +123,14 @@ Since refactoring the maps markers to be `button` elements instead of `div` elem
 As could be seen in the screenshots above, the accesibility score is pretty high, due to semantic setup of the pages, with a few exceptions that are discussed above.
 
 It appears to be pretty much not necessary to use ARIA attributes on most of the pages, with maybe the exception of the floorplan svg elements.
+
+#### Device lab test
+
+TODO
+
+### Exercise 2
+
+![Wireflow](./docs/assets/wireflow.jpg)
 
 ## License
 
