@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../partials/head %>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>StudentPoll</h1>
+            </header>
+            <section>
+                <h2>Create a poll</h2>
+                <form action="#" method="POST" enctype="application/x-www-form-urlencoded">
+                    <fieldset>
+                        <legend>Enter a question to ask to your students</legend>
+
+                        <label for="question">Question</label>
+                        <input
+                            type="text"
+                            name="question"
+                            id="question"
+                            placeholder="What is your opinion on dinosaurs?"
+                        >
+
+                        <label for="option-1">Options</label>
+                        <input
+                            type="text"
+                            name="option-1"
+                            id="option-1"
+                            placeholder="A very nice option here"
+                        >
+                        <input
+                            type="text"
+                            name="option-2"
+                            id="option-2"
+                            placeholder="A very nice option here"
+                        >
+                        <input
+                            type="text"
+                            name="option-3"
+                            id="option-3"
+                            placeholder="A very nice option here"
+                        >
+                        <input
+                            type="text"
+                            name="option-4"
+                            id="option-4"
+                            placeholder="A very nice option here"
+                        >
+                    </fieldset>
+                </form>
+                <footer>
+                    <button type="submit">Add another option</button>
+                </footer>
+            </section>
+            <footer>
+                <a href="#">Start the poll!</a>
+            </footer>
+        </main>
+    </body>
+</html>
