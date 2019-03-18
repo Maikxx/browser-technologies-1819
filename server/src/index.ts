@@ -2,7 +2,7 @@ import Express from 'express'
 import Helmet from 'helmet'
 import path from 'path'
 import compression from 'compression'
-import { getIndexRoute, getErrorRoute } from './routes/getRoutes'
+import { getIndexRoute, getErrorRoute, getRoomRoute } from './routes/getRoutes'
 
 (async() => {
     const app = Express()
@@ -14,7 +14,7 @@ import { getIndexRoute, getErrorRoute } from './routes/getRoutes'
     app.set('views', path.join(__dirname, 'views'))
 
     app.get('/', getIndexRoute)
-    app.get('/', getIndexRoute)
+    app.get('/room', getRoomRoute)
     app.get('*', getErrorRoute)
 
     app.listen(({ port: process.env.PORT || 3000 }), () => {
