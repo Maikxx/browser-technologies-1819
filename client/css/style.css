@@ -31,9 +31,12 @@ body {
 }
 
 body main {
+    width: 100%;
+}
+
+body main > section {
     padding: 1em;
     padding: 1rem;
-    width: 100%;
 }
 
 label,
@@ -79,6 +82,11 @@ q::after {
 
 fieldset {
     border: 0;
+}
+
+header {
+    padding: 1em;
+    padding: 1rem;
 }
 
 header > a {
