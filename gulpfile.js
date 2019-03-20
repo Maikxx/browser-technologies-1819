@@ -16,4 +16,6 @@ gulp.task('minifyCss', () => {
         .pipe(gulp.dest('./server/public/css'))
 })
 
-gulp.watch(['./client/css/*.css'], gulp.series('minifyCss'))
+if (process.env.NODE_ENV !== 'production') {
+    gulp.watch(['./client/css/*.css'], gulp.series('minifyCss'))
+}
