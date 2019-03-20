@@ -11,7 +11,7 @@ import {
     getPendingRoute,
     getScoreRoute,
 } from './routes/getRoutes'
-import { postCreateRoomRoute } from './routes/postRoutes'
+import { postCreateRoomRoute, postIncrementRoute } from './routes/postRoutes'
 
 (async() => {
     const app = Express()
@@ -31,6 +31,7 @@ import { postCreateRoomRoute } from './routes/postRoutes'
     app.get('*', getErrorRoute)
 
     app.post('/create-room', urlencodedParser, postCreateRoomRoute)
+    app.post('/increment-count/:roomId/:answerId', postIncrementRoute)
 
     app.listen(({ port: process.env.PORT || 3000 }), () => {
         console.info(`App is now open for action on port ${process.env.PORT || 3000}.`)

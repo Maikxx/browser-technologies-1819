@@ -27,8 +27,17 @@ export async function getRoomRoute(request: Express.Request, response: Express.R
     })
 }
 
-export function getQuestionRoute(request: Express.Request, response: Express.Response) {
-    response.status(200).render('pages/question', {})
+export async function getQuestionRoute(request: Express.Request, response: Express.Response) {
+    const { id } = request.params
+    const room = await getRoomById(Number(id))
+
+    if (!room) {
+        return response.status(404).redirect('/?error=not-found')
+    }
+
+    response.status(200).render('pages/question', {
+        room,
+    })
 }
 
 export function getPendingRoute(request: Express.Request, response: Express.Response) {

@@ -9,47 +9,19 @@
                 <h1>StudentPoll</h1>
             </header>
             <section>
-                <h2>#Question#</h2>
-                <form
-                    action="/#roomId#/#answerId#"
-                    method="POST"
-                    enctype="application/x-www-form-urlencoded"
-                >
-                    <fieldset>
-                        <legend>#Option 1#</legend>
-                        <button type="submit">#Option 1#</button>
-                    </fieldset>
-                </form>
-                <form
-                    action="/#roomId#/#answerId#"
-                    method="POST"
-                    enctype="application/x-www-form-urlencoded"
-                >
-                    <fieldset>
-                        <legend>#Option 2#</legend>
-                        <button type="submit">#Option 2#</button>
-                    </fieldset>
-                </form>
-                <form
-                    action="/#roomId#/#answerId#"
-                    method="POST"
-                    enctype="application/x-www-form-urlencoded"
-                >
-                    <fieldset>
-                        <legend>#Option 3#</legend>
-                        <button type="submit">#Option 3#</button>
-                    </fieldset>
-                </form>
-                <form
-                    action="/#roomId#/#answerId#"
-                    method="POST"
-                    enctype="application/x-www-form-urlencoded"
-                >
-                    <fieldset>
-                        <legend>#Option 4#</legend>
-                        <button type="submit">#Option 4#</button>
-                    </fieldset>
-                </form>
+                <h2><%= room.question %></h2>
+                <% room.options && room.options.forEach(function(option) { %>
+                    <form
+                        action="<%= option.incrementPostUrl %>"
+                        method="POST"
+                        enctype="application/x-www-form-urlencoded"
+                    >
+                        <fieldset>
+                            <legend><%= option.title %></legend>
+                            <button type="submit"><%= option.title %></button>
+                        </fieldset>
+                    </form>
+                <% }) %>
             </section>
         </main>
     </body>

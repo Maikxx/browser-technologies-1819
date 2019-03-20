@@ -1,11 +1,13 @@
 export interface QuestionOption {
-    [key: string]: string
+    answerId: number
+    currentCount: number
+    [key: string]: string | number
 }
 
 export interface Room {
     id: number
     question: string
-    databaseOptions: QuestionOption[]
+    options: QuestionOption[]
 }
 
 export interface CreateNewRoomProps {
