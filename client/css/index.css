@@ -1,6 +1,9 @@
 .QuestionForm__input {
-    max-width: 80%;
-    max-width: 80vw;
+    width: 100%;
+}
+
+.QuestionForm__fieldset {
+    margin: 0 auto;
 }
 
 .QuestionForm__label + .QuestionForm__input {
@@ -11,8 +14,9 @@
     margin-top: 1em;
 }
 
-.QuestionForm__input + .QuestionForm__label {
-    margin-top: 2em;
+.QuestionForm__label {
+    margin-top: 1em;
+    font-weight: bold;
 }
 
 .QuestionForm__button + .QuestionForm__button {

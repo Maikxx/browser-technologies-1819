@@ -33,6 +33,7 @@ body {
 body main {
     padding: 1em;
     padding: 1rem;
+    width: 100%;
 }
 
 label,
@@ -97,16 +98,22 @@ fieldset {
     transition: .1s ease background-color;
 }
 
-.Button:hover {
+.Button:hover,
+.Button:focus {
     background-color: #E2E2E2;
 }
 
 .Button--submit {
     background-color: #009688;
-    border-color: #37B1A2;
+    border-color: #267B71;
     color: #FFFFFF;
 }
 
-.Button--submit:hover {
-    background-color: #37B1A2;
+.Button--submit:hover,
+.Button--submit:focus {
+    background-color: #267B71;
+}
+
+header > a {
+    display: inline-block;
 }
