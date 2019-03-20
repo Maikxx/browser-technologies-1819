@@ -81,6 +81,11 @@ fieldset {
     border: 0;
 }
 
+header > a {
+    display: inline-block;
+    text-decoration: none;
+}
+
 .Input {
     display: block;
     font-size: 1.2em;
@@ -112,9 +117,4 @@ fieldset {
 .Button--submit:hover,
 .Button--submit:focus {
     background-color: #267B71;
-}
-
-header > a {
-    display: inline-block;
-    text-decoration: none;
 }
