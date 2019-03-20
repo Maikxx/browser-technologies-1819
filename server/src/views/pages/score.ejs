@@ -9,12 +9,14 @@
                 <% include ../partials/linkTitle %>
             </header>
             <section>
-                <h2>Live score for #question#</h2>
+                <h2>Live score for: <%= room.question %></h2>
                 <ul>
-                    <li>68</li>
-                    <li>49</li>
-                    <li>39</li>
-                    <li>20</li>
+                    <% room.options.forEach(function(option) { %>
+                        <li>
+                            <h3><%= option.title %></h3>
+                            <span><%= option.currentCount %></span>
+                        </li>
+                    <% }) %>
                 </ul>
             </section>
             <footer>

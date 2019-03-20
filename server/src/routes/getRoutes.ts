@@ -60,8 +60,17 @@ export async function getPendingRoute(request: Express.Request, response: Expres
     })
 }
 
-export function getScoreRoute(request: Express.Request, response: Express.Response) {
-    response.status(200).render('pages/score', {})
+export async function getScoreRoute(request: Express.Request, response: Express.Response) {
+    const { id } = request.params as RouteParams
+    const room = await getRoomById(Number(id))
+
+    if (!room) {
+        return response.status(404).redirect('/?error=not-found')
+    }
+
+    response.status(200).render('pages/score', {
+        room,
+    })
 }
 
 export function getErrorRoute(request: Express.Request, response: Express.Response) {
