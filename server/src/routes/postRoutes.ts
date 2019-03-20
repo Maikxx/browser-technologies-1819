@@ -28,7 +28,7 @@ export async function postIncrementRoute(request: Express.Request, response: Exp
     try {
         await incrementQuestionOptionCount(roomId, answerId)
 
-        response.status(200).redirect(`/room/${roomId}/pending`)
+        response.status(200).redirect(`/room/${roomId}/pending/${answerId}`)
     } catch (error) {
         throw new Error(error)
     }

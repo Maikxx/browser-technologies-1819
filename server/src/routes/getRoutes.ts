@@ -2,12 +2,17 @@ require('dotenv').config()
 import Express from 'express'
 import { getRoomById } from '../services/database'
 
+interface RouteParams {
+    id?: string
+    selectedId?: string
+}
+
 export function getIndexRoute(request: Express.Request, response: Express.Response) {
     response.status(200).render('pages/index')
 }
 
 export async function getRoomRoute(request: Express.Request, response: Express.Response) {
-    const { id } = request.params
+    const { id } = request.params as RouteParams
     const room = await getRoomById(Number(id))
 
     if (!room) {
@@ -28,7 +33,7 @@ export async function getRoomRoute(request: Express.Request, response: Express.R
 }
 
 export async function getQuestionRoute(request: Express.Request, response: Express.Response) {
-    const { id } = request.params
+    const { id } = request.params as RouteParams
     const room = await getRoomById(Number(id))
 
     if (!room) {
@@ -40,8 +45,19 @@ export async function getQuestionRoute(request: Express.Request, response: Expre
     })
 }
 
-export function getPendingRoute(request: Express.Request, response: Express.Response) {
-    response.status(200).render('pages/pending', {})
+export async function getPendingRoute(request: Express.Request, response: Express.Response) {
+    const { id, selectedId } = request.params as RouteParams
+    const room = await getRoomById(Number(id))
+    const selectedOption = room && room.options.find(option => option.answerId === Number(selectedId))
+
+    if (!room || !selectedOption) {
+        return response.status(404).redirect('/?error=not-found')
+    }
+
+    response.status(200).render('pages/pending', {
+        room,
+        selectedOption,
+    })
 }
 
 export function getScoreRoute(request: Express.Request, response: Express.Response) {
