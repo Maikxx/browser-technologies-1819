@@ -10,8 +10,14 @@
             </header>
             <section>
                 <h2>Waiting room</h2>
-                <a href="#">#Poll-room url# / QR-code if JavaScript is enabled</a>
+                <h3>The question that will be polled is: <%= room.question %></h3>
+                <a href="<%= participationUrl %>"><%= participationUrl %></a>
                 <span>Specific amount of time left for people to join in is shown here</span>
+                <noscript>
+                    <a href="<%= scoreUrl %>">
+                        Click here if the browser does not redirect you after 10 seconds.
+                    </a>
+                </noscript>
             </section>
         </main>
     </body>

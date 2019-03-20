@@ -58,3 +58,18 @@ export async function createNewRoom(props: CreateNewRoomProps) {
         throw new Error(error)
     }
 }
+
+export async function getRoomById(id: number) {
+    try {
+        const database = await getDatabase()
+        const currentRoom = database.find(room => room.id === id)
+
+        if (!currentRoom) {
+            return null
+        }
+
+        return currentRoom
+    } catch (error) {
+        throw new Error(error)
+    }
+}

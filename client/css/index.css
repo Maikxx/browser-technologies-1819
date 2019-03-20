@@ -14,3 +14,7 @@
 .QuestionForm__input + .QuestionForm__label {
     margin-top: 2em;
 }
+
+.QuestionForm__button + .QuestionForm__button {
+    margin-top: 1rem;
+}

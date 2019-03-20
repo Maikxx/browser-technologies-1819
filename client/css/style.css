@@ -89,3 +89,25 @@ fieldset {
     width: 60ch;
     border: 1px solid #000000;
 }
+
+.Button {
+    padding: .5em 1em;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    transition: .1s ease background-color;
+}
+
+.Button:hover {
+    background-color: #E2E2E2;
+}
+
+.Button--submit {
+    background-color: #009688;
+    border-color: #37B1A2;
+    color: #FFFFFF;
+}
+
+.Button--submit:hover {
+    background-color: #37B1A2;
+}
