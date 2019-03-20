@@ -116,4 +116,5 @@ fieldset {
 
 header > a {
     display: inline-block;
+    text-decoration: none;
 }
