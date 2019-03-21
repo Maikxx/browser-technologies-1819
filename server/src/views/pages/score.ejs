@@ -2,26 +2,37 @@
 <html lang="en">
     <head>
         <% include ../partials/head %>
+        <link rel="stylesheet" type="text/css" href="../../../../css/score.css">
     </head>
     <body>
         <main>
             <header class="PageHeader">
                 <% include ../partials/linkTitle %>
             </header>
-            <section>
-                <h2>Live score for: <%= room.question %></h2>
-                <ul>
+            <section class="ContentSection">
+                <h2 class="ContentSection__title">
+                    Live score for: <%= room.question %>
+                </h2>
+                <ul class="ScoreList Row Row--wrap Row--center Row--align-end">
                     <% room.options.forEach(function(option) { %>
-                        <li>
-                            <h3><%= option.title %></h3>
-                            <span><%= option.currentCount %></span>
+                        <li class="ScoreList__option ScoreListOption">
+                            <i
+                                class="ScoreListOption__graph-bar"
+                                style="height: <%= option.currentCount * 10 %>px"
+                            ></i>
+                            <h3 class="ScoreListOption__title">
+                                <%= option.title %>
+                            </h3>
+                            <span class="ScoreListOption__amount">
+                                <%= option.currentCount %>
+                            </span>
                         </li>
                     <% }) %>
                 </ul>
+                <footer class="ContentSection__footer">
+                    <a href="/" class="Link">Create another poll!</button>
+                </footer>
             </section>
-            <footer>
-                <a href="/">Create another poll!</button>
-            </footer>
         </main>
     </body>
 </html>

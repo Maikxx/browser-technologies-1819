@@ -84,6 +84,10 @@
     margin-bottom: .5em;
 }
 
+.ContentSection__footer {
+    margin-top: 1em;
+}
+
 .Link {
     display: block;
     font-size: inherit;
@@ -107,11 +111,23 @@
     .Row--wrap {
         flex-wrap: wrap;
     }
+
+    .Row--center {
+        justify-content: center;
+    }
+
+    .Row--align-end {
+        align-items: flex-end;
+    }
 }
 
 @supports not (display: flex) {
     .Row > * {
         width: 100%;
+    }
+
+    .Row--center > * + * {
+        margin-left: 10%;
     }
 }
 

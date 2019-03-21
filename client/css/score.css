@@ -1,0 +1,39 @@
+/* COLORS */
+/* dark primary: #303F9F */
+/* light primary: #C5CAE9 */
+/* primary: #3F51B5 */
+/* text: #FFFFFF */
+/* accent: #FF5722 */
+/* primary text: #212121 */
+/* secondary text: #757575 */
+/* divider: #BDBDBD */
+
+.ContentSection__title {
+    text-align: center;
+}
+
+.ScoreListOption {
+    min-width: 5em;
+    text-align: center;
+}
+
+.ScoreListOption + .ScoreListOption {
+    margin-left: 5%;
+}
+
+.ScoreListOption__graph-bar {
+    margin-bottom: 1em;
+    width: 100%;
+    display: block;
+    background-color: #303F9F;
+}
+
+.ScoreListOption__amount {
+    text-align: center;
+    display: block;
+}
+
+.ContentSection__footer {
+    text-align: center;
+    margin-top: 3em;
+}
