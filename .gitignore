@@ -3,7 +3,6 @@ node_modules/
 dist/
 .cache/
 .env
-database.json
 
 # Misc
 .DS_Store
