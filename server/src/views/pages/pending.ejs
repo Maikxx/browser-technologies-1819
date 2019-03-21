@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <% include ../partials/head %>
+        <link rel="stylesheet" type="text/css" href="../../../../../css/pending.css">
     </head>
     <body>
         <main>
@@ -10,12 +11,12 @@
             </header>
             <section class="ContentSection">
                 <h2 class="ContentSection__title">
-                    Your answer to: "<%= room.question %>"
+                    Thanks for participating to: "<%= room.question %>"
                 </h2>
-                <span>
+                <span class="AnswerBrick">
                     <%= selectedOption.title %>
                 </span>
-                <p>Watch the beamer to get to know what other people think about this question.</p>
+                <p class="Hint">Watch the beamer to get to know what other people think about this question.</p>
             </section>
         </main>
     </body>

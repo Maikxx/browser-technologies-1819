@@ -1,0 +1,23 @@
+/* COLORS */
+/* dark primary: #303F9F */
+/* light primary: #C5CAE9 */
+/* primary: #3F51B5 */
+/* text: #FFFFFF */
+/* accent: #FF5722 */
+/* primary text: #212121 */
+/* secondary text: #757575 */
+/* divider: #BDBDBD */
+
+.AnswerBrick {
+    display: block;
+    background-color: #303F9F;
+    color: #ffffff;
+    padding: 25%;
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+}
+
+.AnswerBrick + .Hint {
+    margin-top: 2em;
+}
