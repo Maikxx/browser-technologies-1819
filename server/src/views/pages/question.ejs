@@ -5,11 +5,13 @@
     </head>
     <body>
         <main>
-            <header>
-                <h1>StudentPoll</h1>
+            <header class="PageHeader">
+                <h1 class="PageHeader__title">StudentPoll</h1>
             </header>
-            <section>
-                <h2><%= room.question %></h2>
+            <section class="ContentSection">
+                <h2 class="ContentSection__title">
+                    <%= room.question %>
+                </h2>
                 <% room.options && room.options.forEach(function(option) { %>
                     <form
                         action="<%= option.incrementPostUrl %>"

@@ -6,11 +6,11 @@
     </head>
     <body>
         <main>
-            <header>
+            <header class="PageHeader">
                 <% include ../partials/linkTitle %>
             </header>
-            <section>
-                <h2>Create a poll</h2>
+            <section class="ContentSection">
+                <h2 class="ContentSection__title">Create a poll</h2>
                 <form
                     action="/create-room"
                     method="POST"
@@ -31,8 +31,12 @@
                             class="QuestionForm__input Input"
                             required="required"
                         >
-
-                        <label for="option-1" class="QuestionForm__label">Options (fill out at least two)</label>
+                    </fieldset>
+                    <fieldset class="QuestionForm__fieldset">
+                        <legend class="QuestionForm__legend">
+                            Options (fill out at least two)
+                        </legend>
+                        <label for="option-1" class="QuestionForm__label">Option 1</label>
                         <input
                             type="text"
                             name="option-1"
@@ -41,6 +45,8 @@
                             class="QuestionForm__input Input"
                             required="required"
                         >
+
+                        <label for="option-2" class="QuestionForm__label">Option 2</label>
                         <input
                             type="text"
                             name="option-2"
@@ -49,6 +55,8 @@
                             class="QuestionForm__input Input"
                             required="required"
                         >
+
+                        <label for="option-3" class="QuestionForm__label">Option 3</label>
                         <input
                             type="text"
                             name="option-3"
@@ -56,6 +64,8 @@
                             placeholder="Your option goes here"
                             class="QuestionForm__input Input"
                         >
+
+                        <label for="option-4" class="QuestionForm__label">Option 4</label>
                         <input
                             type="text"
                             name="option-4"

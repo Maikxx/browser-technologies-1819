@@ -1,3 +1,13 @@
+/* COLORS */
+/* dark primary: #303F9F */
+/* light primary: #C5CAE9 */
+/* primary: #3F51B5 */
+/* text: #FFFFFF */
+/* accent: #FF5722 */
+/* primary text: #212121 */
+/* secondary text: #757575 */
+/* divider: #BDBDBD */
+
 .QuestionForm__input {
     width: 100%;
 }
@@ -19,11 +29,14 @@
     font-weight: bold;
 }
 
-.QuestionForm__button + .QuestionForm__button {
-    margin-top: 1rem;
+.QuestionForm__legend {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    height: 1px;
+    width: 1px;
 }
 
-h2 {
-    margin-top: 1em;
-    margin-bottom: .25em;
+.QuestionForm__button + .QuestionForm__button {
+    margin-top: 1rem;
 }

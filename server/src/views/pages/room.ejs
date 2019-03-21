@@ -5,14 +5,23 @@
     </head>
     <body>
         <main>
-            <header>
+            <header class="PageHeader">
                 <% include ../partials/linkTitle %>
             </header>
-            <section>
-                <h2>Waiting room</h2>
-                <h3>The question that will be polled is: <%= room.question %></h3>
-                <a href="<%= participationUrl %>"><%= participationUrl %></a>
-                <span>Specific amount of time left for people to join in is shown here</span>
+            <section class="ContentSection">
+                <h2 class="ContentSection__title">
+                    Waiting room
+                </h2>
+                <h3 class="ContentSection__subtitle">
+                    The question that will be polled is: "<%= room.question %>"
+                </h3>
+
+                <a href="<%= participationUrl %>" class="Link ContentSection__link">
+                    <%= participationUrl %>
+                </a>
+                <span>
+                    Specific amount of time left for people to join in is shown here
+                </span>
                 <noscript>
                     <a href="<%= scoreUrl %>">
                         Click here if the browser does not redirect you after 10 seconds.

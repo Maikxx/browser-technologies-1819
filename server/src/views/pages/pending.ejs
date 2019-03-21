@@ -5,12 +5,16 @@
     </head>
     <body>
         <main>
-            <header>
-                <h1>StudentPoll</h1>
+            <header class="PageHeader">
+                <h1 class="PageHeader__title">StudentPoll</h1>
             </header>
-            <section>
-                <h2>Your answer to: <%= room.question %></h2>
-                <span><%= selectedOption.title %></span>
+            <section class="ContentSection">
+                <h2 class="ContentSection__title">
+                    Your answer to: <%= room.question %>
+                </h2>
+                <span>
+                    <%= selectedOption.title %>
+                </span>
                 <p>Watch the beamer to get to know what other people think about this question.</p>
             </section>
         </main>

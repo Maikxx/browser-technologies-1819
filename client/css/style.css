@@ -1,3 +1,13 @@
+/* COLORS */
+/* dark primary: #303F9F */
+/* light primary: #C5CAE9 */
+/* primary: #3F51B5 */
+/* text: #FFFFFF */
+/* accent: #FF5722 */
+/* primary text: #212121 */
+/* secondary text: #757575 */
+/* divider: #BDBDBD */
+
 * {
     margin: 0;
     font-family: inherit;
@@ -5,6 +15,7 @@
     padding: 0;
     color: inherit;
     box-sizing: inherit;
+    letter-spacing: 1px;
 }
 
 *::before,
@@ -26,17 +37,13 @@ body {
     display: flex;
     line-height: 1;
     background-color: #FFFFFF;
+    color: #212121;
     overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body main {
     width: 100%;
-}
-
-body main > section {
-    padding: 1em;
-    padding: 1rem;
 }
 
 label,
@@ -82,47 +89,4 @@ q::after {
 
 fieldset {
     border: 0;
-}
-
-header {
-    padding: 1em;
-    padding: 1rem;
-}
-
-header > a {
-    display: inline-block;
-    text-decoration: none;
-}
-
-.Input {
-    display: block;
-    font-size: 1.2em;
-    padding: .25em .5em;
-    width: 30em;
-    width: 60ch;
-    border: 1px solid #000000;
-}
-
-.Button {
-    padding: .5em 1em;
-    border-radius: 2px;
-    background-color: #FFFFFF;
-    border: 1px solid #000000;
-    transition: .1s ease background-color;
-}
-
-.Button:hover,
-.Button:focus {
-    background-color: #E2E2E2;
-}
-
-.Button--submit {
-    background-color: #009688;
-    border-color: #267B71;
-    color: #FFFFFF;
-}
-
-.Button--submit:hover,
-.Button--submit:focus {
-    background-color: #267B71;
 }
