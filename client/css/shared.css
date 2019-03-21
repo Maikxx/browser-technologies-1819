@@ -92,7 +92,8 @@
     cursor: pointer;
 }
 
-.Link:hover {
+.Link:hover,
+.Link:focus {
     text-decoration: underline;
     color: #FF4C13;
 }
