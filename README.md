@@ -1,5 +1,7 @@
 # Browser technologies
 
+[🚀 Live demo 🚀](https://browser-technologies.herokuapp.com/)
+
 ## Table of Contents
 
 1. [Installation](#Installation)
@@ -166,12 +168,15 @@ TODO
 
 ## Todos
 
-* Add cache to the routes.
-* Add CSS to the application.
 * Add JavaScript to the application.
 * Add Sockets for real-time aspect, when supported.
-* Implement all functionality (Adding more options etc.).
-* Add a database (PostgreSQL?) to store room data, like the question, options and scores for each option.
+* Add persistent colors when choosing an option.
+* Test color blindness compatibility.
+* Test in older browsers.
+
+## Future enhancements
+
+* Add ability to add more than 4 options
 
 ## License
 
