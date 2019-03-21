@@ -161,6 +161,8 @@ TODO
     [Fully supported from IE9](https://caniuse.com/#feat=css-sel3).
 * [CSS3 Colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color).
     [Supported from IE9](https://caniuse.com/#feat=css3-colors).
+* [Web Fonts](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face).
+    [Fully supported from IE9](https://caniuse.com/#feat=fontface).
 
 ## Todos
 

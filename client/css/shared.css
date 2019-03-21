@@ -93,6 +93,7 @@
     font-size: inherit;
     color: #FF5722;
     transition: .2s color ease;
+    text-decoration: none;
     cursor: pointer;
 }
 
