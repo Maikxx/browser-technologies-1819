@@ -152,9 +152,15 @@ TODO
 ##### CSS
 
 * [VW/VH Unit](https://developer.mozilla.org/en-US/docs/Web/CSS/length).
-    [Supported from IE9, Safari 6, Firefox 19, Google Chrome 20](https://caniuse.com/#search=vw).
+    [Supported from IE9](https://caniuse.com/#search=vw).
 * [CH Unit](https://developer.mozilla.org/en-US/docs/Web/CSS/length).
-    [Supported from IE9, Safari 6.0.2, Google Chrome 25](https://www.quirksmode.org/css/units-values/#t00).
+    [Supported from IE9](https://www.quirksmode.org/css/units-values/#t00).
+* [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/flex).
+    [Effectively supported from Edge](https://caniuse.com/#search=display%3A%20flex). Unfortunately I was told not to prefix CSS, which causes Internet Explorer to now work with flexbox.
+* [CSS3 Selectors](https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector).
+    [Fully supported from IE9](https://caniuse.com/#feat=css-sel3).
+* [CSS3 Colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color).
+    [Supported from IE9](https://caniuse.com/#feat=css3-colors).
 
 ## Todos
 

@@ -72,7 +72,7 @@
 }
 
 .ContentSection__title {
-    margin-bottom: .25em;
+    margin-bottom: 1em;
 }
 
 .ContentSection__subtitle {
@@ -95,4 +95,21 @@
 .Link:hover {
     text-decoration: underline;
     color: #FF4C13;
+}
+
+@supports (display: flex) {
+    .Row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .Row--wrap {
+        flex-wrap: wrap;
+    }
+}
+
+@supports not (display: flex) {
+    .Row > * {
+        width: 100%;
+    }
 }

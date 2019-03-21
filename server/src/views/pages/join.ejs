@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../partials/head %>
+        <link rel="stylesheet" type="text/css" href="../../../../css/join.css">
+    </head>
+    <body>
+        <main>
+            <header class="PageHeader">
+                <h1 class="PageHeader__title">StudentPoll</h1>
+            </header>
+            <section class="ContentSection">
+                <h2 class="ContentSection__title">
+                    <%= room.question %>
+                </h2>
+                <div class="Row Row--wrap">
+                    <% room.options && room.options.forEach(function(option, index) { %>
+                        <form
+                            action="<%= option.incrementPostUrl %>"
+                            method="POST"
+                            enctype="application/x-www-form-urlencoded"
+                            class="PollForm"
+                        >
+                            <fieldset class="PollForm__fieldset">
+                                <legend class="PollForm__legend">
+                                    <%= option.title %>
+                                </legend>
+                                <button type="submit" class="PollForm__button">
+                                    <%= option.title %>
+                                </button>
+                            </fieldset>
+                        </form>
+                    <% }) %>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

@@ -7,7 +7,7 @@ import {
     getIndexRoute,
     getErrorRoute,
     getRoomRoute,
-    getQuestionRoute,
+    getJoinRoute,
     getPendingRoute,
     getScoreRoute,
 } from './routes/getRoutes'
@@ -25,7 +25,7 @@ import { postCreateRoomRoute, postIncrementRoute } from './routes/postRoutes'
 
     app.get('/', getIndexRoute)
     app.get('/room/:id', getRoomRoute)
-    app.get('/room/:id/question', getQuestionRoute)
+    app.get('/room/:id/join', getJoinRoute)
     app.get('/room/:id/score', getScoreRoute)
     app.get('/room/:id/pending/:selectedId', getPendingRoute)
     app.get('*', getErrorRoute)

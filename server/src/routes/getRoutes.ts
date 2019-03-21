@@ -22,7 +22,7 @@ export async function getRoomRoute(request: Express.Request, response: Express.R
     const urlBase = process.env.NODE_ENV !== 'production'
         ? `http://localhost:3000`
         : `https://browser-technologies.herokuapp.com`
-    const participationUrl = `${urlBase}/room/${room.id}/question`
+    const participationUrl = `${urlBase}/room/${room.id}/join`
     const scoreUrl = `${urlBase}/room/${room.id}/score`
 
     response.status(200).render('pages/room', {
@@ -32,7 +32,7 @@ export async function getRoomRoute(request: Express.Request, response: Express.R
     })
 }
 
-export async function getQuestionRoute(request: Express.Request, response: Express.Response) {
+export async function getJoinRoute(request: Express.Request, response: Express.Response) {
     const { id } = request.params as RouteParams
     const room = await getRoomById(Number(id))
 
@@ -40,7 +40,7 @@ export async function getQuestionRoute(request: Express.Request, response: Expre
         return response.status(404).redirect('/?error=not-found')
     }
 
-    response.status(200).render('pages/question', {
+    response.status(200).render('pages/join', {
         room,
     })
 }

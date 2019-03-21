@@ -1,0 +1,84 @@
+/* COLORS */
+/* dark primary: #303F9F */
+/* light primary: #C5CAE9 */
+/* primary: #3F51B5 */
+/* text: #FFFFFF */
+/* accent: #FF5722 */
+/* primary text: #212121 */
+/* secondary text: #757575 */
+/* divider: #BDBDBD */
+
+.PollForm {
+    display: inline-block;
+    width: 50%;
+}
+
+.PollForm__legend {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    height: 1px;
+    width: 1px
+}
+
+.PollForm__button {
+    width: 100%;
+    font-weight: bold;
+    padding: 40% 0;
+    border: none;
+    background-color: #303F9F;
+    color: #ffffff;
+    transition: .1s ease all;
+}
+
+.PollForm:first-of-type .PollForm__button,
+.PollForm:nth-of-type(1n + 4) .PollForm__button {
+    background-color: #FF5722;
+    color: #212121;
+}
+
+.PollForm:nth-of-type(2) .PollForm__button,
+.PollForm:nth-of-type(2n + 4) .PollForm__button {
+    background-color: #303F9F;
+    color: #ffffff;
+}
+
+.PollForm:nth-of-type(3) .PollForm__button,
+.PollForm:nth-of-type(3n + 4) .PollForm__button {
+    background-color: #009688;
+    color: #ffffff;
+}
+
+.PollForm:nth-of-type(4) .PollForm__button,
+.PollForm:nth-of-type(4n + 4) .PollForm__button {
+    background-color: #795548;
+    color: #ffffff;
+}
+
+.PollForm:first-of-type .PollForm__button:hover,
+.PollForm:first-of-type .PollForm__button:focus,
+.PollForm:nth-of-type(1n + 4) .PollForm__button:hover,
+.PollForm:nth-of-type(1n + 4) .PollForm__button:focus {
+    background-color: rgba(255, 87, 34, 0.8);
+}
+
+.PollForm:nth-of-type(2) .PollForm__button:hover,
+.PollForm:nth-of-type(2) .PollForm__button:focus,
+.PollForm:nth-of-type(2n + 4) .PollForm__button:hover,
+.PollForm:nth-of-type(2n + 4) .PollForm__button:focus {
+    background-color: rgba(48, 63, 159, 0.8);
+}
+
+.PollForm:nth-of-type(3) .PollForm__button:hover,
+.PollForm:nth-of-type(3) .PollForm__button:focus,
+.PollForm:nth-of-type(3n + 4) .PollForm__button:hover,
+.PollForm:nth-of-type(3n + 4) .PollForm__button:focus {
+    background-color: rgba(0, 150, 136, 0.8);
+}
+
+.PollForm:nth-of-type(4) .PollForm__button:hover,
+.PollForm:nth-of-type(4) .PollForm__button:focus,
+.PollForm:nth-of-type(4n + 4) .PollForm__button:hover,
+.PollForm:nth-of-type(4n + 4) .PollForm__button:focus {
+    background-color: rgba(121, 85, 72, 0.8)
+}
