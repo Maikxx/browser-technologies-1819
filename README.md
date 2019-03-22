@@ -181,9 +181,7 @@ TODO
 
 ## Todos
 
-* Add JavaScript to the application.
 * Add Sockets for real-time aspect, when supported.
-* Add persistent colors when choosing an option.
 * Test color blindness compatibility.
 * Test in older browsers.
 
