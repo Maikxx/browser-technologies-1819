@@ -166,6 +166,19 @@ TODO
 * [Web Fonts](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face).
     [Fully supported from IE9](https://caniuse.com/#feat=fontface).
 
+#### JavaScript
+
+* [element.getElementsByClassName](https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByClassName).
+    [Supported from IE9](https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByClassName#Browser_compatibility).
+* [element.querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector).
+    [Supported from IE9](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector#Browser_compatibility).
+* [element.setAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute).
+    [Supported from IE6](https://caniuse.com/#search=setAttribute).
+* [String.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice).
+    [Supported from Firefox 4 and all versions of IE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice#Browser_compatibility).
+* [String.prototype.lastIndexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf).
+    [Supported from IE6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf#Browser_compatibility).
+
 ## Todos
 
 * Add JavaScript to the application.
