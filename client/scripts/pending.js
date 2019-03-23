@@ -1,7 +1,3 @@
-// tslint:disable:no-var-keyword
-// tslint:disable:prefer-template
-// tslint:disable:prefer-const
-
 var answerBrickElement = getHtmlElementByClass('AnswerBrick')
 
 if (answerBrickElement && lastIndexOfExists() && sliceExists() && setAttributeExists()) {
@@ -24,11 +20,11 @@ if (answerBrickElement && lastIndexOfExists() && sliceExists() && setAttributeEx
     }
 }
 
-function getHtmlElementByClass(className: string) {
+function getHtmlElementByClass(className) {
     if (querySelectorExists()) {
         return document.querySelector('.' + className)
     } else if (getElementsByClassNameExists()) {
-        return (document as Document).getElementsByClassName(className)[0]
+        return document.getElementsByClassName(className)[0]
     } else {
         return null
     }

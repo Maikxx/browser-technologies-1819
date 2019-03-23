@@ -1,9 +1,3 @@
-type lastIndexOfExists = () => boolean
-type sliceExists = () => boolean
-type setAttributeExists = () => boolean
-type querySelectorExists = () => boolean
-type getElementsByClassNameExsts = () => boolean
-
 function lastIndexOfExists() {
     return 'lastIndexOf' in String.prototype
         && typeof String.prototype.lastIndexOf === 'function'
@@ -16,7 +10,7 @@ function sliceExists() {
 
 function setAttributeExists() {
     return 'setAttribute' in document.body
-        && typeof (document as Document).body.setAttribute === 'function'
+        && typeof document.body.setAttribute === 'function'
 }
 
 function querySelectorExists() {
@@ -27,4 +21,14 @@ function querySelectorExists() {
 function getElementsByClassNameExists() {
     return 'getElementsByClassName' in document
         && typeof document.getElementsByClassName === 'function'
+}
+
+function appendChildExists() {
+    return 'appendChild' in document.body
+        && typeof document.body.appendChild === 'function'
+}
+
+function getElementsByTagNameExists() {
+    return 'getElementsByTagName' in document.body
+        && typeof document.body.getElementsByTagName === 'function'
 }

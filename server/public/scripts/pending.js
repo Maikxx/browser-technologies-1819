@@ -1,6 +1,4 @@
-// tslint:disable:no-var-keyword
-// tslint:disable:prefer-template
-// tslint:disable:prefer-const
+// tslint:disable
 var answerBrickElement = getHtmlElementByClass('AnswerBrick');
 if (answerBrickElement && lastIndexOfExists() && sliceExists() && setAttributeExists()) {
     var locationPath = window.location && window.location.pathname;
