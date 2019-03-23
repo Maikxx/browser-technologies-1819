@@ -22,11 +22,11 @@ function onScoreAdded(data) {
             continue
         }
 
-        updateGraphBar(graphBars[i])
+        updateGraph(graphBars[i])
     }
 }
 
-function updateGraphBar(graphBar) {
+function updateGraph(graphBar) {
     var currentHeight = Number(graphBar.style.height.replace('px', ''))
     graphBar.style.height = currentHeight + 10 + 'px'
     var parent = graphBar.parentElement
