@@ -4,6 +4,7 @@
 
 This project makes use of dirty tricks to maximize browser support through progressive enhancement.
 This project will work with either with or without JavaScript in a very similar fashion.
+This app will not work below IE6, since information and browser support about DOM manipulation is not clear.
 
 ## Table of Contents
 

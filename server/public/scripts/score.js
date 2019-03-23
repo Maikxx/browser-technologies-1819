@@ -4,8 +4,3 @@
 if (lastIndexOfExists()) {
     var socket = io();
 }
-else {
-    var metaRefreshTag = document.createElement('meta');
-    metaRefreshTag.httpEquiv = 'refresh';
-    metaRefreshTag.content = '5';
-}
