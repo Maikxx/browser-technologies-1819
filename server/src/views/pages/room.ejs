@@ -25,14 +25,10 @@
                     Or by typing the following URL into your browser: <%= participationUrl %>
                 </span>
 
-                <span>
-                    Specific amount of time left for people to join in is shown here
-                </span>
-                <noscript>
-                    <a href="<%= scoreUrl %>">
-                        Click here if the browser does not redirect you after 10 seconds.
-                    </a>
-                </noscript>
+                <span id="countdown-timer"></span>
+                <a href="<%= scoreUrl %>" class="Link ContentSection__link">
+                    Alternatively, click here if when you are ready to start the poll.
+                </a>
             </section>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
