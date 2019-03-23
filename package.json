@@ -12,7 +12,7 @@
         "minify-css": "gulp minifyCss",
         "open-chrome": "wait-on http://localhost:3000 && open -a \"Google Chrome\" http://localhost:3000",
         "prebuild-client": "yarn minify-css && yarn moveClientJS",
-        "start-server": "concurrently \"yarn prebuild-client\" \"yarn watch-server\" \"yarn open-chrome\" --raw",
+        "start-server": "yarn prebuild-client && concurrently \"gulp watchClient\" \"yarn watch-server\" \"yarn open-chrome\" --raw",
         "start": "node server/dist/index.js",
         "watch-server": "ts-node-dev --respawn --transpileOnly ./server/src/index.ts"
     },

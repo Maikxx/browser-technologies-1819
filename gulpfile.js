@@ -21,7 +21,9 @@ gulp.task('moveJavaScript', () => {
         .pipe(gulp.dest('./server/public/scripts'))
 })
 
-if (process.env.NODE_ENV !== 'production') {
-    gulp.watch(['./client/css/*.css'], gulp.series('minifyCss'))
-    gulp.watch(['./client/scripts/*.js'], gulp.series('moveJavaScript'))
-}
+gulp.task('watchClient', () => {
+    if (process.env.NODE_ENV !== 'production') {
+        gulp.watch(['./client/css/*.css'], gulp.series('minifyCss'))
+        gulp.watch(['./client/scripts/*.js'], gulp.series('moveJavaScript'))
+    }
+})

@@ -1,6 +1,6 @@
 // Bootstrap the application with websockets or with <meta http-equiv=refresh content="5">
 // The latter will only happen below IE6
-; if (lastIndexOfExists()) {
+if (lastIndexOfExists()) {
     var socket = io()
 } else if (getElementsByTagNameExists() && appendChildExists()) {
     var metaRefreshTag = document.createElement('meta')
