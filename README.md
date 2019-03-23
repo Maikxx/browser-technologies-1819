@@ -29,7 +29,8 @@ Massive respect for the people that ruined their life trying to make something o
         1. [Technologies used](#Technologies-used)
             1. [HTML](#HTML)
             2. [CSS](#CSS)
-            3. [JavaScript](#JavaScript)
+            3. [Native JavaScript](#Native-JavaScript)
+            4. [JavaScript Extra](#JavaScript-Extra)
 3. [Todos](#Todos)
 4. [License](#License)
 slice
@@ -177,7 +178,7 @@ Might not be possible anymore due to the Device lab not working correctly. I wil
 * [Web Fonts](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face).
     [Fully supported from IE9](https://caniuse.com/#feat=fontface).
 
-#### JavaScript
+#### Native JavaScript
 
 * [element.getElementsByClassName](https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByClassName).
     [Supported from IE9](https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByClassName#Browser_compatibility).
@@ -194,9 +195,13 @@ Might not be possible anymore due to the Device lab not working correctly. I wil
 * [String.prototype methods](https://www-archive.mozilla.org/js/language/E262-3.pdf).
     [Supported from IE6](https://caniuse.com/#search=EcmaScript%203%20String.prototype%20methods).
 
+#### JavaScript Extra
+
+* [Socket.io](https://socket.io/). Supported from IE6.
+* [QRCodeJS](https://github.com/davidshimjs/qrcodejs). Supported from IE6.
+
 ## Todos
 
-* Add Sockets for real-time aspect, when supported.
 * Test color blindness compatibility.
 * Test in older browsers.
 
