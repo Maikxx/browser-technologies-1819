@@ -101,7 +101,7 @@ function setTextContentOfElement(element, content) {
     }
 }
 
-function canMakeUseOfClientWebSockets() {
+function canMakeUseOfJavaScript() {
     return lastIndexOfExists()
         && getElementsByTagNameExists()
         && getAttributeExists()

@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <% include ../partials/head %>
+        <link rel="stylesheet" type="text/css" href="../../../../../css/room.css">
     </head>
     <body>
         <main>
@@ -16,9 +17,14 @@
                     The question that will be polled is: "<%= room.question %>"
                 </h3>
 
+                <i id="qrcode"></i>
                 <a href="<%= participationUrl %>" class="Link ContentSection__link">
-                    <%= participationUrl %>
+                    Alternatively, you can also join by clicking here.
                 </a>
+                <span class="ContentSection__text">
+                    Or by typing the following URL into your browser: <%= participationUrl %>
+                </span>
+
                 <span>
                     Specific amount of time left for people to join in is shown here
                 </span>
@@ -29,5 +35,8 @@
                 </noscript>
             </section>
         </main>
+        <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+        <script src="../../../../scripts/featureDetection.js"></script>
+        <script src="../../../../scripts/room.js"></script>
     </body>
 </html>

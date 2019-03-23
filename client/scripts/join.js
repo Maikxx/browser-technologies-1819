@@ -1,5 +1,4 @@
-// Bootstrap the application with websockets (IE6+, hence the checks)
-if (lastIndexOfExists() && getElementsByTagNameExists() && getAttributeExists()) {
+if (canMakeUseOfJavaScript()) {
     var socket = io()
 
     var forms = document.getElementsByTagName('form')

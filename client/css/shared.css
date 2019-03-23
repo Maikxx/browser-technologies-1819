@@ -80,8 +80,10 @@
     font-weight: normal;
 }
 
-.ContentSection__link {
+.ContentSection__link,
+.ContentSection__text {
     margin-bottom: .5em;
+    display: inline-block;
 }
 
 .ContentSection__footer {

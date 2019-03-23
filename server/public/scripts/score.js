@@ -1,5 +1,4 @@
-// Bootstrap the application with websockets (IE6+, hence the checks)
-if (canMakeUseOfClientWebSockets()) {
+if (canMakeUseOfJavaScript()) {
     var locationPath = window.location.pathname
     var socket = io()
     var urlWithoutScore = locationPath.replace('/score', '')
