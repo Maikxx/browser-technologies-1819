@@ -1,6 +1,8 @@
 import Express from 'express'
 import Helmet from 'helmet'
 import path from 'path'
+import socketIO from 'socket.io'
+import http from 'http'
 import compression from 'compression'
 import bodyParser from 'body-parser'
 import {
@@ -15,10 +17,13 @@ import { postCreateRoomRoute, postIncrementRoute } from './routes/postRoutes'
 
 (async() => {
     const app = Express()
+    const server = new http.Server(app)
+    const urlencodedParser = bodyParser.urlencoded({ extended: false })
+    const socket = socketIO(server)
+
     app.use(Helmet())
     app.use(compression())
     app.use(Express.static(path.join(__dirname, '../public')))
-    const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
     app.set('view engine', 'ejs')
     app.set('views', path.join(__dirname, 'views'))
@@ -33,7 +38,11 @@ import { postCreateRoomRoute, postIncrementRoute } from './routes/postRoutes'
     app.post('/create-room', urlencodedParser, postCreateRoomRoute)
     app.post('/increment-count/:roomId/:answerId', postIncrementRoute)
 
-    app.listen(({ port: process.env.PORT || 3000 }), () => {
+    socket.on('connection', (socket: SocketIO.Socket) => {
+        console.log('connected')
+    })
+
+    server.listen(({ port: process.env.PORT || 3000 }), () => {
         console.info(`App is now open for action on port ${process.env.PORT || 3000}.`)
     })
 })()

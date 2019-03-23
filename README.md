@@ -2,6 +2,9 @@
 
 [🚀 Live demo 🚀](https://browser-technologies.herokuapp.com/)
 
+This project makes use of dirty tricks to maximize browser support through progressive enhancement.
+This project will work with either with or without JavaScript in a very similar fashion.
+
 ## Table of Contents
 
 1. [Installation](#Installation)
@@ -22,7 +25,9 @@
         3. [Device lab test](#Device-lab-test)
     2. [Exercise 2](#Exercise-2)
         1. [Technologies used](#Technologies-used)
-            1. [CSS](#CSS)
+            1. [HTML](#HTML)
+            2. [CSS](#CSS)
+            3. [JavaScript](#JavaScript)
 3. [Todos](#Todos)
 4. [License](#License)
 
@@ -151,6 +156,10 @@ TODO
 
 #### Technologies used
 
+#### HTML
+
+* `<meta http-equiv="refresh" content="5">`
+
 ##### CSS
 
 * [VW/VH Unit](https://developer.mozilla.org/en-US/docs/Web/CSS/length).
@@ -174,6 +183,8 @@ TODO
     [Supported from IE9](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector#Browser_compatibility).
 * [element.setAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute).
     [Supported from IE6](https://caniuse.com/#search=setAttribute).
+* [Location API](https://developer.mozilla.org/en-US/docs/Web/API/Location).
+    * [Supported as intended from FireFox 22](https://developer.mozilla.org/en-US/docs/Web/API/Location#Browser_compatibility).
 * [String.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice).
     [Supported from Firefox 4 and all versions of IE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice#Browser_compatibility).
 * [String.prototype.lastIndexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf).

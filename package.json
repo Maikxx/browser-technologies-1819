@@ -25,6 +25,8 @@
         "@types/helmet": "^0.0.43",
         "@types/memory-cache": "^0.2.0",
         "@types/node-fetch": "^2.1.6",
+        "@types/socket.io": "^2.1.2",
+        "@types/socket.io-client": "^1.4.32",
         "concurrently": "^4.1.0",
         "copyfiles": "^2.1.0",
         "gulp": "^4.0.0",
@@ -46,7 +48,8 @@
         "express": "^4.16.4",
         "helmet": "^3.16.0",
         "memory-cache": "^0.2.0",
-        "node-fetch": "^2.3.0"
+        "node-fetch": "^2.3.0",
+        "socket.io": "^2.2.0"
     },
     "engineStrict": true,
     "engines": {
