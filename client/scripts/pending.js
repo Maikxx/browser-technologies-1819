@@ -19,13 +19,3 @@ if (answerBrickElement && lastIndexOfExists() && sliceExists() && setAttributeEx
         }
     }
 }
-
-function getHtmlElementByClass(className) {
-    if (querySelectorExists()) {
-        return document.querySelector('.' + className)
-    } else if (getElementsByClassNameExists()) {
-        return document.getElementsByClassName(className)[0]
-    } else {
-        return null
-    }
-}

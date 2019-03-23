@@ -14,3 +14,8 @@ export interface CreateNewRoomProps {
     question: string
     options: [string, any][]
 }
+
+export interface ScoreAddedProps {
+    roomId: string
+    answerId: string
+}

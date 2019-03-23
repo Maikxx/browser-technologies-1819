@@ -14,12 +14,13 @@ import {
     getScoreRoute,
 } from './routes/getRoutes'
 import { postCreateRoomRoute, postIncrementRoute } from './routes/postRoutes'
+import { ScoreAddedProps } from './types/Room'
 
 (async() => {
     const app = Express()
     const server = new http.Server(app)
     const urlencodedParser = bodyParser.urlencoded({ extended: false })
-    const socket = socketIO(server)
+    const socketio = socketIO(server)
 
     app.use(Helmet())
     app.use(compression())
@@ -38,8 +39,10 @@ import { postCreateRoomRoute, postIncrementRoute } from './routes/postRoutes'
     app.post('/create-room', urlencodedParser, postCreateRoomRoute)
     app.post('/increment-count/:roomId/:answerId', postIncrementRoute)
 
-    socket.on('connection', (socket: SocketIO.Socket) => {
-        console.log('connected')
+    socketio.on('connection', (socket: SocketIO.Socket) => {
+        socket.on('score added', (data: ScoreAddedProps) => {
+            socketio.emit('score added', data)
+        })
     })
 
     server.listen(({ port: process.env.PORT || 3000 }), () => {

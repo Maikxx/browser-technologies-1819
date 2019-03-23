@@ -5,6 +5,7 @@
 This project makes use of dirty tricks to maximize browser support through progressive enhancement.
 This project will work with either with or without JavaScript in a very similar fashion.
 This app might or might not work below IE6, the DOM manipulation guides of these old browsers are so vague it gave me a headache.
+Massive respect for the people that ruined their life trying to make something out of JavaScript in the pre-IE6 era.
 
 ## Table of Contents
 
@@ -16,7 +17,7 @@ This app might or might not work below IE6, the DOM manipulation guides of these
         1. [Feature tests and solutions](#Feature-tests-and-solutions)
             1. [Images](#Images)
             2. [Custom fonts](#Custom-fonts)
-            3. [JavaScript](#JavaScript)
+            3. [JavaScript off](#JavaScript-off)
             4. [Color](#Color)
             5. [Mouse / Trackpad](#Mouse-/-Trackpad)
             6. [Broadband](#Broadband)
@@ -31,7 +32,7 @@ This app might or might not work below IE6, the DOM manipulation guides of these
             3. [JavaScript](#JavaScript)
 3. [Todos](#Todos)
 4. [License](#License)
-
+slice
 ### Installation
 
 ### Pre-install
@@ -74,7 +75,7 @@ A simple improvement that can be made here is to fix the `alt="undefined"` to be
 
 This test is pretty easy, since there will not change anything to the interface when disabling custom fonts, since this application does not make use of custom fonts. If I were to be using custom fonts, I would have fallen back to another font because of this:  `font-family: Arial, Helvetica, sans-serif;`.
 
-##### JavaScript
+##### JavaScript off
 
 When disabling JavaScript, it is simple, just a white page is shown, since everything is rendered into the `main` element from JavaScript.
 This can be solved (which I am not going to do right now, because that is an issue for the other course) is to render the application on the server and send it to the client. This would show a lot of the content just fine, with the exeption for the map on the homepage.
@@ -149,7 +150,7 @@ It appears to be pretty much not necessary to use ARIA attributes on most of the
 
 #### Device lab test
 
-TODO
+Might not be possible anymore due to the Device lab not working correctly. I will check this in the last week of this course.
 
 ### Exercise 2
 
@@ -168,7 +169,7 @@ TODO
 * [CH Unit](https://developer.mozilla.org/en-US/docs/Web/CSS/length).
     [Supported from IE9](https://www.quirksmode.org/css/units-values/#t00).
 * [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/flex).
-    [Effectively supported from Edge](https://caniuse.com/#search=display%3A%20flex). Unfortunately I was told not to prefix CSS, which causes Internet Explorer to now work with flexbox.
+    [Effectively supported from Edge](https://caniuse.com/#search=display%3A%20flex). Unfortunately I was told not to prefix CSS, which causes Internet Explorer to not work with flexbox.
 * [CSS3 Selectors](https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector).
     [Fully supported from IE9](https://caniuse.com/#feat=css-sel3).
 * [CSS3 Colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color).
@@ -180,16 +181,18 @@ TODO
 
 * [element.getElementsByClassName](https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByClassName).
     [Supported from IE9](https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByClassName#Browser_compatibility).
-* [element.querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector).
-    [Supported from IE9](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector#Browser_compatibility).
-* [element.setAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute).
-    [Supported from IE6](https://caniuse.com/#search=setAttribute).
+* [element.getElementsByTagNameExists / element.appendChild / element.setAttribute / element.className](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html).
+    [Supported from IE6](https://caniuse.com/#search=DOM%20core%20level%202).
+* [element.querySelector / element.querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector).
+    [Supported from IE8/IE9](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector#Browser_compatibility).
 * [Location API](https://developer.mozilla.org/en-US/docs/Web/API/Location).
-    * [Supported as intended from FireFox 22](https://developer.mozilla.org/en-US/docs/Web/API/Location#Browser_compatibility).
-* [String.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice).
-    [Supported from Firefox 4 and all versions of IE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice#Browser_compatibility).
-* [String.prototype.lastIndexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf).
-    [Supported from IE6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf#Browser_compatibility).
+    [Supported as intended from Firefox 22](https://developer.mozilla.org/en-US/docs/Web/API/Location#Browser_compatibility).
+* [Node.innerText](https://html.spec.whatwg.org/multipage/dom.html#the-innertext-idl-attribute).
+    [Supported from IE6 and Firefox 44](https://caniuse.com/#feat=innertext).
+* [Node.textContent](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent).
+    [Supported from IE9](https://caniuse.com/#search=textContent).
+* [String.prototype methods](https://www-archive.mozilla.org/js/language/E262-3.pdf).
+    [Supported from IE6](https://caniuse.com/#search=EcmaScript%203%20String.prototype%20methods).
 
 ## Todos
 
