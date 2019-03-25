@@ -202,7 +202,6 @@ Might not be possible anymore due to the Device lab not working correctly. I wil
 
 ## Todos
 
-* Test color blindness compatibility.
 * Test in older browsers.
 
 ## Future enhancements
