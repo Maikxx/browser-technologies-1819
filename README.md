@@ -151,7 +151,7 @@ It appears to be pretty much not necessary to use ARIA attributes on most of the
 
 #### Device lab test
 
-Might not be possible anymore due to the Device lab not working correctly. I will check this in the last week of this course.
+The device lab test for the OBA application was not very useful, since the app full on crashed on all the browsers on the devices. This might be due to the fact that I did not specify for these kind of browsers. Unfortunately the set up for the device lab took way more than the time it actually helped me. The reason that the browsers don't work is because I did write only ESNext code and did not compile it down to ES3, on which these browsers run.
 
 ### Exercise 2
 
