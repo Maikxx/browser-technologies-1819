@@ -26,6 +26,21 @@
     width: 100%;
     display: block;
     background-color: #303F9F;
+    transition: .3s ease all;
+    will-change: heigth;
+    position: relative;
+}
+
+.ScoreListOption__incrementor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.ScoreListOption:nth-child(1) .ScoreListOption__incrementor {
+    color: #000000;
 }
 
 .ScoreListOption:nth-child(1) .ScoreListOption__graph-bar {

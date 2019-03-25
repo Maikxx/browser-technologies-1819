@@ -20,6 +20,7 @@ function onScoreAdded(data) {
     }
 
     var graphBars = getHtmlElementsByClass('ScoreListOption__graph-bar')
+    var counters = getHtmlElementsByClass('ScoreListOption__incrementor')
     for (var i = 0; i < graphBars.length; i++) {
         if (!graphBars[i]
             || !graphBars[i].hasAttribute('data-answer-id')
@@ -28,23 +29,24 @@ function onScoreAdded(data) {
             continue
         }
 
-        updateGraph(graphBars[i])
+        updateGraph(graphBars[i], counters[i])
     }
 }
 
-function updateGraph(graphBar) {
+function updateGraph(graphBar, counter) {
     var currentHeight = Number(graphBar.style.height.replace('px', ''))
-    graphBar.className = graphBar.className + ' incrementing'
     graphBar.style.height = currentHeight + 10 + 'px'
-
-    setTimeout(() => {
-        graphBar.className = 'ScoreListOption__graph-bar'
-    }, 500)
 
     var parent = graphBar.parentElement
     var amountElement = parent.children[2]
 
+    if (counter) {
+        var counterElementText = counter.innerText
+        setTextContentOfElement(counter, '+ ' + Number((Number(counterElementText.replace('+ ', '')) || 0) + 1))
+    }
+
     if (amountElement) {
-        setTextContentOfElement(amountElement, Number(amountElement.innerText) + 1)
+        var amountElementText = amountElement.innerText
+        setTextContentOfElement(amountElement, Number(amountElementText) + 1)
     }
 }
