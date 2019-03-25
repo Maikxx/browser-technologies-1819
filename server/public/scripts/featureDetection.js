@@ -83,6 +83,8 @@ function setTextContentOfElement(element, content) {
         element.textContent = content
     } else if ('innerText' in element) {
         element.innerText = content
+    } else {
+        throw new Error('Cannot set text content of element')
     }
 }
 
