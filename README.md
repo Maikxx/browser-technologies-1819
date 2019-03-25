@@ -202,14 +202,14 @@ The device lab test for the OBA application was not very useful, since the app f
 
 ## Todos
 
-* Add ability to add more than 4 options.
-* Test on device lab.
-* Add animations to the live updating graph.
+* Add ability to add more than 4 options. (**Major**)
+* Test on device lab. (**Minor**)
+* Add animations to the live updating graph. (**Medium**)
 
 ## Future enhancements
 
-* Add long polling for situation where Sockets is not supported (<IE6).
-* Add scaling to the graph.
+* Add long polling for situation where Sockets is not supported (<IE6). (**Medium**)
+* Add scaling to the graph. (**Medium**)
 
 ## License
 
