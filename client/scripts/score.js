@@ -1,11 +1,16 @@
 if (canMakeUseOfJavaScript()) {
-    removeMetaRefresh()
-
     var locationPath = window.location.pathname
-    var socket = io()
-    var urlWithoutScore = locationPath.replace('/score', '')
-    var roomId = urlWithoutScore.slice(urlWithoutScore.lastIndexOf('/') + 1)
-    socket.on('score added', onScoreAdded)
+
+    if (io && typeof io === 'function') {
+        var socket = io()
+        var urlWithoutScore = locationPath.replace('/score', '')
+        var roomId = urlWithoutScore.slice(urlWithoutScore.lastIndexOf('/') + 1)
+        socket.on('score added', onScoreAdded)
+    } else {
+        setTimeout(() => {
+            window.location.reload()
+        }, 5000)
+    }
 }
 
 function onScoreAdded(data) {
@@ -27,20 +32,15 @@ function onScoreAdded(data) {
     }
 }
 
-function removeMetaRefresh() {
-    var head = document.getElementsByTagName('head')[0]
-    var metaTags = document.getElementsByTagName('meta')
-
-    for (var i = 0; i < metaTags.length; i++) {
-        if (metaTags[i].httpEquiv) {
-            head.removeChild(metaTags[i])
-        }
-    }
-}
-
 function updateGraph(graphBar) {
     var currentHeight = Number(graphBar.style.height.replace('px', ''))
+    graphBar.className = graphBar.className + ' incrementing'
     graphBar.style.height = currentHeight + 10 + 'px'
+
+    setTimeout(() => {
+        graphBar.className = 'ScoreListOption__graph-bar'
+    }, 500)
+
     var parent = graphBar.parentElement
     var amountElement = parent.children[2]
 
