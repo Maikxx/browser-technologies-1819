@@ -3,7 +3,7 @@
 /* light primary: #C5CAE9 */
 /* primary: #3F51B5 */
 /* text: #FFFFFF */
-/* accent: #FF5722 */
+/* accent: #DF3600 */
 /* primary text: #212121 */
 /* secondary text: #757575 */
 /* divider: #BDBDBD */
@@ -55,8 +55,8 @@
 }
 
 .Button--submit {
-    background-color: #FF5722;
-    color: #212121;
+    background-color: #DF3600;
+    color: #000000;
 }
 
 .Button--submit:hover,
@@ -93,7 +93,7 @@
 .Link {
     display: block;
     font-size: inherit;
-    color: #FF5722;
+    color: #DF3600;
     transition: .2s color ease;
     text-decoration: none;
     cursor: pointer;
@@ -102,7 +102,6 @@
 .Link:hover,
 .Link:focus {
     text-decoration: underline;
-    color: #FF4C13;
 }
 
 @supports (display: flex) {

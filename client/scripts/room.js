@@ -3,6 +3,9 @@ if (canMakeUseOfJavaScript()) {
     var joinUrl = href + '/join'
     new QRCode(document.getElementById('qrcode'), joinUrl)
 
+    const qrCodeImage = document.getElementsByTagName('img')[0]
+    qrCodeImage.alt = 'Scan this QR code to join the poll'
+
     var timeToWaitInSeconds = 90 * 1000
     var countDownDate = new Date().getTime() + timeToWaitInSeconds
     var interval = setInterval(function() {
