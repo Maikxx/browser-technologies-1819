@@ -1,4 +1,6 @@
 if (canMakeUseOfJavaScript()) {
+    removeMetaRefresh()
+
     var locationPath = window.location.pathname
     var socket = io()
     var urlWithoutScore = locationPath.replace('/score', '')
@@ -22,6 +24,17 @@ function onScoreAdded(data) {
         }
 
         updateGraph(graphBars[i])
+    }
+}
+
+function removeMetaRefresh() {
+    var head = document.getElementsByTagName('head')[0]
+    var metaTags = document.getElementsByTagName('meta')
+
+    for (var i = 0; i < metaTags.length; i++) {
+        if (metaTags[i].httpEquiv) {
+            head.removeChild(metaTags[i])
+        }
     }
 }
 
