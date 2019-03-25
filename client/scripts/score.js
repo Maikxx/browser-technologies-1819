@@ -37,6 +37,10 @@ function updateGraph(graphBar, counter) {
     var currentHeight = Number(graphBar.style.height.replace('px', ''))
     graphBar.style.height = currentHeight + 10 + 'px'
 
+    if (graphBar.className.indexOf('animate') < 0) {
+        graphBar.className = graphBar.className + ' animate'
+    }
+
     var parent = graphBar.parentElement
     var amountElement = parent.children[2]
 

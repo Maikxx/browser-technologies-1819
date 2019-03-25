@@ -28,7 +28,22 @@
     background-color: #303F9F;
     transition: .3s ease all;
     will-change: heigth;
+    font-style: normal;
     position: relative;
+}
+
+@keyframes scaleUp {
+    from, to {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.ScoreListOption__graph-bar.animate {
+    animation: .5s ease scaleUp;
 }
 
 .ScoreListOption__incrementor {

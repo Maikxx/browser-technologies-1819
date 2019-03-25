@@ -217,7 +217,6 @@ The device lab test for the OBA application was not very useful, since the app f
 
 * Add ability to add more than 4 options. (**Major**)
 * Test on device lab. (**Minor**)
-* Add animations to the live updating graph. (**Medium**)
 
 ## Future enhancements
 
