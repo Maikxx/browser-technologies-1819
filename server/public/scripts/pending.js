@@ -1,4 +1,4 @@
-var answerBrickElement = getHtmlElementByClass('AnswerBrick')
+var answerBrickElement = getHtmlElementsByClass('AnswerBrick')[0]
 
 if (answerBrickElement && canMakeUseOfJavaScript()) {
     var locationPath = window.location && window.location.pathname

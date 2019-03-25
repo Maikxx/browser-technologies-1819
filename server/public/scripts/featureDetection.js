@@ -22,11 +22,6 @@ function classNameExists() {
     return 'className' in document.body
 }
 
-function querySelectorExists() {
-    return 'querySelector' in document
-        && typeof document.body.querySelector === 'function'
-}
-
 function querySelectorAllExists() {
     return 'querySelectorAll' in document
         && typeof document.body.querySelectorAll === 'function'
@@ -71,16 +66,6 @@ function getElementsByClassNameAlternative(className) {
     }
 
     return matches
-}
-
-function getHtmlElementByClass(className) {
-    if (querySelectorExists()) {
-        return document.querySelector('.' + className)
-    } else if (gettagsByClassNameExists()) {
-        return document.getElementsByClassName(className)[0]
-    } else {
-        return getElementsByClassNameAlternative(className)[0]
-    }
 }
 
 function getHtmlElementsByClass(className) {
