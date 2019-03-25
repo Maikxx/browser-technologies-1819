@@ -202,11 +202,11 @@ Might not be possible anymore due to the Device lab not working correctly. I wil
 
 ## Todos
 
-* Test in older browsers.
-
-## Future enhancements
-
 * Add ability to add more than 4 options
+* Test on device lab.
+* Add long polling for situation where Sockets is not supported (<IE6).
+* Add animations to the live updating graph.
+* Add scaling to the graph.
 
 ## License
 
