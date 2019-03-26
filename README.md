@@ -33,11 +33,10 @@ Massive respect for the people that ruined their life trying to make something o
         2. [Screen reader test](#Screen-reader-test)
         3. [Device lab test](#Device-lab-test)
     2. [Exercise 2](#Exercise-2)
-        1. [Technologies used](#Technologies-used)
-            1. [HTML](#HTML)
-            2. [CSS](#CSS)
-            3. [Native JavaScript](#Native-JavaScript)
-            4. [JavaScript Extra](#JavaScript-Extra)
+        1. [HTML](#HTML)
+        2. [CSS](#CSS)
+        3. [Native JavaScript](#Native-JavaScript)
+        4. [JavaScript Extra](#JavaScript-Extra)
 3. [Todos](#Todos)
 4. [License](#License)
 
@@ -164,14 +163,12 @@ The device lab test for the OBA application was not very useful, since the app f
 
 ![Wireflow](./docs/assets/wireflow.jpg)
 
-#### Technologies used
-
 #### HTML
 
 * `<meta http-equiv="refresh" content="5">`
 * [Input type: number](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number). Supported from IE10.
 
-##### CSS
+#### CSS
 
 * [VW/VH Unit](https://developer.mozilla.org/en-US/docs/Web/CSS/length).
 
