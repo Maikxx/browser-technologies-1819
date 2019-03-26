@@ -22,7 +22,9 @@
                             Enter a question to ask to your students
                         </legend>
 
-                        <label for="question" class="QuestionForm__label">Question</label>
+                        <label for="question" class="QuestionForm__label">
+                            Polling question (required)
+                        </label>
                         <input
                             type="text"
                             name="question"
@@ -34,9 +36,9 @@
                     </fieldset>
                     <fieldset class="QuestionForm__fieldset">
                         <legend class="QuestionForm__legend">
-                            Options (fill out at least two)
+                            Options (at least 4)
                         </legend>
-                        <label for="option-1" class="QuestionForm__label">Option 1</label>
+                        <label for="option-1" class="QuestionForm__label">Option 1 (required)</label>
                         <input
                             type="text"
                             name="option-1"
@@ -46,7 +48,7 @@
                             required="required"
                         >
 
-                        <label for="option-2" class="QuestionForm__label">Option 2</label>
+                        <label for="option-2" class="QuestionForm__label">Option 2 (required)</label>
                         <input
                             type="text"
                             name="option-2"
@@ -55,28 +57,66 @@
                             class="QuestionForm__input Input"
                             required="required"
                         >
-
-                        <label for="option-3" class="QuestionForm__label">Option 3</label>
+                        <label for="option-3" class="QuestionForm__label">Option 3 (required)</label>
                         <input
                             type="text"
                             name="option-3"
                             id="option-3"
                             placeholder="Your option goes here"
                             class="QuestionForm__input Input"
+                            required="required"
                         >
 
-                        <label for="option-4" class="QuestionForm__label">Option 4</label>
+                        <label for="option-4" class="QuestionForm__label">Option 4 (required)</label>
                         <input
                             type="text"
                             name="option-4"
                             id="option-4"
                             placeholder="Your option goes here"
                             class="QuestionForm__input Input"
+                            required="required"
                         >
+                        <% Array.from({length: ioc || 0}, (_, x) => x).forEach(function(num) { %>
+                            <label for="option-<%= num + 5 %>" class="QuestionForm__label">Option <%= num + 5 %></label>
+                            <input
+                                type="text"
+                                name="option-<%= num + 5 %>"
+                                id="option-<%= num + 5 %>"
+                                placeholder="Your option goes here"
+                                class="QuestionForm__input Input"
+                            >
+                        <% }) %>
                     </fieldset>
 
-                    <button type="button" class="Button QuestionForm__button">Add another option</button>
                     <button type="submit" class="Button Button--submit QuestionForm__button">Start the poll</button>
+                </form>
+                <form
+                    action="/increment-option-fields/<%= ioc %>"
+                    method="POST"
+                    class="IncrementOptionsForm"
+                    enctype="application/x-www-form-urlencoded"
+                >
+                    <noscript>
+                        <label for="incrementOptionsByAmount">
+                            Please enter the amount of options you would like to have added.
+                            Do this before adding the options text itself, or you will have to type it over.
+                            Also, reloading the page will result in more options being added, so don't do that I guess.
+                        </label>
+                        <input
+                            type="number"
+                            required="required"
+                            placeholder="1"
+                            value="1"
+                            min="1"
+                            max="4"
+                            name="incrementOptionsByAmount"
+                            id="incrementOptionsByAmount"
+                            class="Input Input--small"
+                        >
+                    </noscript>
+                    <button type="submit" class="Button Button--action">
+                        Add more options
+                    </button>
                 </form>
             </section>
         </main>

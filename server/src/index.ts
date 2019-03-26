@@ -13,7 +13,7 @@ import {
     getPendingRoute,
     getScoreRoute,
 } from './routes/getRoutes'
-import { postCreateRoomRoute, postIncrementRoute } from './routes/postRoutes'
+import { postCreateRoomRoute, postIncrementRoute, postIncrementOptionFieldsRoute } from './routes/postRoutes'
 import { ScoreAddedProps } from './types/Room'
 
 (async() => {
@@ -38,6 +38,7 @@ import { ScoreAddedProps } from './types/Room'
 
     app.post('/create-room', urlencodedParser, postCreateRoomRoute)
     app.post('/increment-count/:roomId/:answerId', postIncrementRoute)
+    app.post('/increment-option-fields/:nextIoc', urlencodedParser, postIncrementOptionFieldsRoute)
 
     socketio.on('connection', (socket: SocketIO.Socket) => {
         socket.on('score added', (data: ScoreAddedProps) => {

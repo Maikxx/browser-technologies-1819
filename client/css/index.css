@@ -16,7 +16,7 @@
     margin: 0 auto;
 }
 
-.QuestionForm__label + .QuestionForm__input {
+label + .Input {
     margin-top: .5em;
 }
 
@@ -24,7 +24,7 @@
     margin-top: 1em;
 }
 
-.QuestionForm__label {
+label {
     margin-top: 1em;
     font-weight: bold;
 }
@@ -37,6 +37,10 @@
     width: 1px;
 }
 
-.QuestionForm__button + .QuestionForm__button {
+.QuestionForm__button {
     margin-top: 1rem;
+}
+
+noscript + .Button {
+    margin-top: 1em;
 }

@@ -54,23 +54,28 @@
     color: #ffffff;
 }
 
-.ScoreListOption:nth-child(1) .ScoreListOption__incrementor {
+.ScoreListOption:nth-child(1) .ScoreListOption__incrementor,
+.ScoreListOption:nth-child(1n + 4) .ScoreListOption__incrementor {
     color: #000000;
 }
 
-.ScoreListOption:nth-child(1) .ScoreListOption__graph-bar {
+.ScoreListOption:nth-child(1) .ScoreListOption__graph-bar,
+.ScoreListOption:nth-child(1n + 4) .ScoreListOption__graph-bar {
     background-color: #DF3600;
 }
 
-.ScoreListOption:nth-child(2) .ScoreListOption__graph-bar {
+.ScoreListOption:nth-child(2) .ScoreListOption__graph-bar,
+.ScoreListOption:nth-child(2n + 4) .ScoreListOption__graph-bar {
     background-color: #303F9F;
 }
 
-.ScoreListOption:nth-child(3) .ScoreListOption__graph-bar {
+.ScoreListOption:nth-child(3) .ScoreListOption__graph-bar,
+.ScoreListOption:nth-child(3n + 4) .ScoreListOption__graph-bar {
     background-color: #009688;
 }
 
-.ScoreListOption:nth-child(4) .ScoreListOption__graph-bar {
+.ScoreListOption:nth-child(4) .ScoreListOption__graph-bar,
+.ScoreListOption:nth-child(4n + 4) .ScoreListOption__graph-bar {
     background-color: #795548;
 }
 

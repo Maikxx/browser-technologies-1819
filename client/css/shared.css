@@ -40,6 +40,10 @@
     opacity: 0.5;
 }
 
+.Input--small {
+    width: initial;
+}
+
 .Button {
     padding: .5em 1em;
     border-radius: 1px;
@@ -62,6 +66,16 @@
 .Button--submit:hover,
 .Button--submit:focus {
     background-color: #FF4C13;
+}
+
+.Button--action {
+    background-color: #303F9F;
+    color: #FFFFFF;
+}
+
+.Button--action:hover,
+.Button--action:focus {
+    background-color: #2a378b;
 }
 
 .ContentSection {

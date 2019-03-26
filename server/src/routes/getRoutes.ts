@@ -1,6 +1,7 @@
 require('dotenv').config()
 import Express from 'express'
 import { getRoomById } from '../services/database'
+import { state } from '../services/state'
 
 interface RouteParams {
     id?: string
@@ -8,7 +9,13 @@ interface RouteParams {
 }
 
 export function getIndexRoute(request: Express.Request, response: Express.Response) {
-    response.status(200).render('pages/index')
+    const { ioc } = request.query as { ioc: string }
+    const nextIoc = state.currentIoc + (Number(ioc) || 0)
+    state.currentIoc = nextIoc
+
+    response.status(200).render('pages/index', {
+        ioc: nextIoc,
+    })
 }
 
 export async function getRoomRoute(request: Express.Request, response: Express.Response) {

@@ -162,6 +162,7 @@ The device lab test for the OBA application was not very useful, since the app f
 #### HTML
 
 * `<meta http-equiv="refresh" content="5">`
+* [Input type: number](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number). Supported from IE10.
 
 ##### CSS
 

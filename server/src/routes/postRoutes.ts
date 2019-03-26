@@ -33,3 +33,13 @@ export async function postIncrementRoute(request: Express.Request, response: Exp
         throw new Error(error)
     }
 }
+
+export async function postIncrementOptionFieldsRoute(request: Express.Request, response: Express.Response) {
+    const { incrementOptionsByAmount } = request.body
+
+    if (Number(incrementOptionsByAmount)) {
+        response.status(200).redirect(`/?ioc=${incrementOptionsByAmount}`)
+    } else {
+        response.status(302).redirect('/')
+    }
+}
