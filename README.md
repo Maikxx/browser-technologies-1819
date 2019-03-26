@@ -37,7 +37,7 @@ Massive respect for the people that ruined their life trying to make something o
         2. [CSS](#CSS)
         3. [Native JavaScript](#Native-JavaScript)
         4. [JavaScript Extra](#JavaScript-Extra)
-3. [Todos](#Todos)
+3. [Future enhancements](#Future-enhancements)
 4. [License](#License)
 
 ### Installation
@@ -218,15 +218,11 @@ The device lab test for the OBA application was not very useful, since the app f
 * [Socket.io](https://socket.io/). Supported from IE6.
 * [QRCodeJS](https://github.com/davidshimjs/qrcodejs). Supported from IE6.
 
-## Todos
-
-* Add ability to add more than 4 options. (**Major**)
-* Test on device lab. (**Minor**)
-
 ## Future enhancements
 
-* Add long polling for situation where Sockets is not supported (<IE6). (**Medium**)
-* Add scaling to the graph. (**Medium**)
+* [X] Add ability to add more than 4 options. (**Major**)
+* [ ] Add long polling for situation where Sockets is not loaded for some reason. (**Medium**)
+* [ ] Add scaling to the graph. (**Medium**)
 
 ## License
 
