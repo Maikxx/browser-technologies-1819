@@ -7,6 +7,13 @@ This project will work with either with or without JavaScript in a very similar 
 This app might or might not work below IE6, the DOM manipulation guides of these old browsers are so vague it gave me a headache.
 Massive respect for the people that ruined their life trying to make something out of JavaScript in the pre-IE6 era.
 
+![Homepage](./docs/application/home-empty.png)
+![Homepage filled in](./docs/application/home-filled.png)
+![Participate view](./docs/application/participate.png)
+![Participated view](./docs/application/participated.png)
+![Waiting room view](./docs/application/waiting-room.png)
+![Live score view](./docs/application/score.png)
+
 ## Table of Contents
 
 1. [Installation](#Installation)
@@ -33,7 +40,7 @@ Massive respect for the people that ruined their life trying to make something o
             4. [JavaScript Extra](#JavaScript-Extra)
 3. [Todos](#Todos)
 4. [License](#License)
-slice
+
 ### Installation
 
 ### Pre-install
