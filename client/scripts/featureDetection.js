@@ -84,7 +84,17 @@ function setTextContentOfElement(element, content) {
     } else if ('innerText' in element) {
         element.innerText = content
     } else {
-        throw new Error('Cannot set text content of element')
+        throw new Error('Cannot set text content of element...')
+    }
+}
+
+function attachEventToElement(element, event, callback) {
+    if ('addEventListener' in element) {
+        element.addEventListener(event, callback)
+    } else if ('attachEvent' in element) {
+        element.attachEvent(event, callback)
+    } else {
+        throw new Error('Cannot set event listener on element...')
     }
 }
 
