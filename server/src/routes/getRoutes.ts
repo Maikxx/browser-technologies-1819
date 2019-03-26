@@ -9,9 +9,16 @@ interface RouteParams {
 }
 
 export function getIndexRoute(request: Express.Request, response: Express.Response) {
-    const { ioc } = request.query as { ioc: string }
-    const nextIoc = state.currentIoc + (Number(ioc) || 0)
-    state.currentIoc = nextIoc
+    const { ioc } = request.query as { ioc?: string }
+    let nextIoc: number
+
+    if (ioc) {
+        nextIoc = state.currentIoc + (Number(ioc) || 0)
+        state.currentIoc = nextIoc
+    } else {
+        nextIoc = 0
+        state.currentIoc = 0
+    }
 
     response.status(200).render('pages/index', {
         ioc: nextIoc,

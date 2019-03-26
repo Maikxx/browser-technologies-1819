@@ -11,6 +11,11 @@
             </header>
             <section class="ContentSection">
                 <h2 class="ContentSection__title">Create a poll</h2>
+                <noscript>
+                    <p class="ContentSection__text">
+                        If you would like to add more than the provided, please read the guide below first.
+                    </p>
+                </noscript>
                 <form
                     action="/create-room"
                     method="POST"
@@ -98,9 +103,9 @@
                 >
                     <noscript>
                         <label for="incrementOptionsByAmount">
-                            Please enter the amount of options you would like to have added.
-                            Do this before adding the options text itself, or you will have to type it over.
-                            Also, reloading the page will result in more options being added, so don't do that I guess.
+                            1. Enter amount of options you want extra.<br>
+                            2. Do this before filling in the options.<br>
+                            3. You'd best not reload the page. This will add extra fields.
                         </label>
                         <input
                             type="number"
