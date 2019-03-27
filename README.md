@@ -243,8 +243,8 @@ The device lab test for the OBA application was not very useful, since the app f
     Also the Axe accesible extension provides no issues. ![Axe score](./docs/application/fully-accesible.png).
 5. [ ] Mouse / Trackpad
 6. [ ] Broadband
-7. [ ] Cookies
-8. [ ] LocalStorage
+7. [X] Cookies / localStorage
+    This app does not make use of cookies and / or localStorage.
 
 ## License
 
