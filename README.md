@@ -222,6 +222,7 @@ The device lab test for the OBA application was not very useful, since the app f
 ## Future enhancements
 
 * [X] Add ability to add more than 4 options. (**Major**).
+* [ ] Add feedback for cases where the user is offline and / or is loading something. (**Medium**).
 * [ ] Add long polling for situation where Sockets is not loaded for some reason. (**Medium**).
 * [ ] Add scaling to the graph. (**Medium**).
 * [ ] Add support for polling multiple questions at once (**Major**).
@@ -230,20 +231,35 @@ The device lab test for the OBA application was not very useful, since the app f
 ## Checklist
 
 1. [X] Images
+
     Disabling images will do nothing to the only place where I use an image, which is in the waiting room, as can be seen here. ![Image is disabled](./docs/application/disabled-images.png). This is, because the QRCode library creates an image when images are available, and otherwise creates the QRCode with `canvas`.
+
 2. [X] Custom fonts
+
     With custom fonts: ![Custom fonts enabled](./docs/application/custom-fonts-enabled.png).
     Without custom fonts: ![Custom fonts disabled](./docs/application/custom-fonts-disabled.png).
     This does not cause any major issues, besides the fact that the sizes are a bit off.
+
 3. [X] JavaScript off
+
     Without JavaScript the application provides the core functionality of the application. Making use of mainly POST form submissions to mock interaction. Also to view the live score without JavaScript, the page will refresh every 5 seconds.
+
 4. [X] Color
+
     Every page is checked by using the audits tab in Google Chromes Devtools.
     Here is an image of one of the pages that passed the color blindness tests. ![Passing color check](./docs/application/fully-accesible-colors.png).
     Also the Axe accesible extension provides no issues. ![Axe score](./docs/application/fully-accesible.png).
-5. [ ] Mouse / Trackpad
-6. [ ] Broadband
+
+5. [X] Mouse / Trackpad
+
+    Tab support for all the pages works as expected due to the fact that a good HTML structure is used.
+
+6. [X] Broadband
+
+    If you don't have internet, you won't be able to access the site, simple as that, I did not have enough time to implement offline functionality. I also did not add loaders or feedback for loading scripts or pages. Added this to the [Future enhancements](#Future-enhancements). Besides all this, the page is still pretty fast on very slow connections. ![Loading times](./docs/application/load-time.png). Much can be improved here, but in my opinion this is fine for the demo.
+
 7. [X] Cookies / localStorage
+
     This app does not make use of cookies and / or localStorage.
 
 ## License
