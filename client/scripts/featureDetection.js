@@ -59,6 +59,6 @@ function canMakeUseOfJavaScript() {
         && checkIfFeatureExists('setAttribute', document.body, 'function')
         && checkIfFeatureExists('hasAttribute', document.body, 'function')
         && checkIfFeatureExists('getAttribute', document.body, 'function')
-        && checkIfFeatureExists('pathname', window.location, 'function')
-        && checkIfFeatureExists('className', document.body, 'function')
+        && checkIfFeatureExists('pathname', window.location)
+        && checkIfFeatureExists('className', document.body)
 }
