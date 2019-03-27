@@ -1,4 +1,5 @@
 if (canMakeUseOfJavaScript()) {
+    removeElementsThatNeedToBeRemoved()
     var addMoreOptionsForm = getHtmlElementsByClass('IncrementOptionsForm')[0]
     var questionFormFieldset = getHtmlElementsByClass('QuestionForm__fieldset')[1]
     var questionFormInputs = getHtmlElementsByClass('QuestionForm__input')
@@ -27,5 +28,17 @@ if (canMakeUseOfJavaScript()) {
                 questionFormFieldset.appendChild(inputElement)
             }
         })
+    }
+}
+
+function removeElementsThatNeedToBeRemoved() {
+    var elements = getHtmlElementsByClass('removeIfJavaScriptEnabled')
+
+    if (elements && elements.length > 0) {
+        for (var i = 0; i < elements.length; i++) {
+            if (elements[i].parentNode) {
+                elements[i].parentNode.removeChild(elements[i])
+            }
+        }
     }
 }

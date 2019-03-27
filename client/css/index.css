@@ -41,6 +41,6 @@ label {
     margin-top: 1rem;
 }
 
-noscript + .Button {
+.Button.Button--action {
     margin-top: 1em;
 }
