@@ -38,7 +38,8 @@ Massive respect for the people that ruined their life trying to make something o
         3. [Native JavaScript](#Native-JavaScript)
         4. [JavaScript Extra](#JavaScript-Extra)
 3. [Future enhancements](#Future-enhancements)
-4. [License](#License)
+4. [Checklist](#Checklist)
+5. [License](#License)
 
 ### Installation
 
@@ -225,6 +226,25 @@ The device lab test for the OBA application was not very useful, since the app f
 * [ ] Add scaling to the graph. (**Medium**).
 * [ ] Add support for polling multiple questions at once (**Major**).
 * [ ] Fix memory leak caused by Socket.io updating every score window for every update (**Medium**).
+
+## Checklist
+
+1. [X] Images
+    Disabling images will do nothing to the only place where I use an image, which is in the waiting room, as can be seen here. ![Image is disabled](./docs/application/disabled-images.png). This is, because the QRCode library creates an image when images are available, and otherwise creates the QRCode with `canvas`.
+2. [X] Custom fonts
+    With custom fonts: ![Custom fonts enabled](./docs/application/custom-fonts-enabled.png).
+    Without custom fonts: ![Custom fonts disabled](./docs/application/custom-fonts-disabled.png).
+    This does not cause any major issues, besides the fact that the sizes are a bit off.
+3. [X] JavaScript off
+    Without JavaScript the application provides the core functionality of the application. Making use of mainly POST form submissions to mock interaction. Also to view the live score without JavaScript, the page will refresh every 5 seconds.
+4. [X] Color
+    Every page is checked by using the audits tab in Google Chromes Devtools.
+    Here is an image of one of the pages that passed the color blindness tests. ![Passing color check](./docs/application/fully-accesible-colors.png).
+    Also the Axe accesible extension provides no issues. ![Axe score](./docs/application/fully-accesible.png).
+5. [ ] Mouse / Trackpad
+6. [ ] Broadband
+7. [ ] Cookies
+8. [ ] LocalStorage
 
 ## License
 
