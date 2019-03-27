@@ -1,9 +1,18 @@
-# Browser technologies
+# StudentPoll
 
 [🚀 Live demo 🚀](https://browser-technologies.herokuapp.com/)
 
 This project makes use of dirty tricks to maximize browser support through progressive enhancement.
 This project will work with either with or without JavaScript in a very similar fashion.
+
+The task for this application was to create a very solid **polling application** which could be used by **teachers** to poll students and view the results in **real-time**.
+The key aspects for this app are highlighted, because they influenced my design choices.
+The app contains two parts, one for the **teacher** and one for the **student**. It should be clear which part of the application is intended for who (the student just has to scan the QRCode or follow the link).
+
+**Core functionality**
+The core functionality of this application is to provide the teachers (or anyone for that matter) with a way to ask other people a question and view the results of what is being voted in a (semi-)live and thus real-time fashion.
+
+**Disclaimer**
 This app might or might not work below IE6, the DOM manipulation guides of these old browsers are so vague it gave me a headache.
 Massive respect for the people that ruined their life trying to make something out of JavaScript in the pre-IE6 era.
 
