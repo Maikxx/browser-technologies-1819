@@ -17,6 +17,7 @@
         url('../assets/fonts/Fira-Sans-ExtraBoldItalic.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-ExtraBoldItalic.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-ExtraBoldItalic.svg#FiraSans-ExtraBoldItalic') format('svg');
+    font-display: swap;
     font-weight: 800;
     font-style: italic;
 }
@@ -30,6 +31,7 @@
         url('../assets/fonts/Fira-Sans-Italic.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-Italic.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-Italic.svg#FiraSans-Italic') format('svg');
+    font-display: swap;
     font-weight: normal;
     font-style: italic;
 }
@@ -43,6 +45,7 @@
         url('../assets/fonts/Fira-Sans-SemiBoldItalic.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-SemiBoldItalic.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-SemiBoldItalic.svg#FiraSans-SemiBoldItalic') format('svg');
+    font-display: swap;
     font-weight: 600;
     font-style: italic;
 }
@@ -56,6 +59,7 @@
         url('../assets/fonts/Fira-Sans-ExtraLight.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-ExtraLight.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-ExtraLight.svg#FiraSans-ExtraLight') format('svg');
+    font-display: swap;
     font-weight: 200;
     font-style: normal;
 }
@@ -69,6 +73,7 @@
         url('../assets/fonts/Fira-Sans-Medium.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-Medium.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-Medium.svg#FiraSans-Medium') format('svg');
+    font-display: swap;
     font-weight: 500;
     font-style: normal;
 }
@@ -82,6 +87,7 @@
         url('../assets/fonts/Fira-Sans-LightItalic.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-LightItalic.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-LightItalic.svg#FiraSans-LightItalic') format('svg');
+    font-display: swap;
     font-weight: 300;
     font-style: italic;
 }
@@ -95,6 +101,7 @@
         url('../assets/fonts/Fira-Sans-SemiBold.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-SemiBold.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-SemiBold.svg#FiraSans-SemiBold') format('svg');
+    font-display: swap;
     font-weight: 600;
     font-style: normal;
 }
@@ -108,6 +115,7 @@
         url('../assets/fonts/Fira-Sans-Bold.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-Bold.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-Bold.svg#FiraSans-Bold') format('svg');
+    font-display: swap;
     font-weight: bold;
     font-style: normal;
 }
@@ -121,6 +129,7 @@
         url('../assets/fonts/Fira-Sans-BoldItalic.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-BoldItalic.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-BoldItalic.svg#FiraSans-BoldItalic') format('svg');
+    font-display: swap;
     font-weight: bold;
     font-style: italic;
 }
@@ -134,6 +143,7 @@
         url('../assets/fonts/Fira-Sans-ExtraLightItalic.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-ExtraLightItalic.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-ExtraLightItalic.svg#FiraSans-ExtraLightItalic') format('svg');
+    font-display: swap;
     font-weight: 200;
     font-style: italic;
 }
@@ -147,6 +157,7 @@
         url('../assets/fonts/Fira-Sans-Thin.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-Thin.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-Thin.svg#FiraSans-Thin') format('svg');
+    font-display: swap;
     font-weight: 100;
     font-style: normal;
 }
@@ -160,6 +171,7 @@
         url('../assets/fonts/Fira-Sans-Black.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-Black.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-Black.svg#FiraSans-Black') format('svg');
+    font-display: swap;
     font-weight: 900;
     font-style: normal;
 }
@@ -173,6 +185,7 @@
         url('../assets/fonts/Fira-Sans-Regular.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-Regular.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-Regular.svg#FiraSans-Regular') format('svg');
+    font-display: swap;
     font-weight: normal;
     font-style: normal;
 }
@@ -186,6 +199,7 @@
         url('../assets/fonts/Fira-Sans-ExtraBold.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-ExtraBold.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-ExtraBold.svg#FiraSans-ExtraBold') format('svg');
+    font-display: swap;
     font-weight: 800;
     font-style: normal;
 }
@@ -199,6 +213,7 @@
         url('../assets/fonts/Fira-Sans-MediumItalic.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-MediumItalic.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-MediumItalic.svg#FiraSans-MediumItalic') format('svg');
+    font-display: swap;
     font-weight: 500;
     font-style: italic;
 }
@@ -212,6 +227,7 @@
         url('../assets/fonts/Fira-Sans-Light.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-Light.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-Light.svg#FiraSans-Light') format('svg');
+    font-display: swap;
     font-weight: 300;
     font-style: normal;
 }
@@ -225,6 +241,7 @@
         url('../assets/fonts/Fira-Sans-ThinItalic.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-ThinItalic.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-ThinItalic.svg#FiraSans-ThinItalic') format('svg');
+    font-display: swap;
     font-weight: 100;
     font-style: italic;
 }
@@ -238,6 +255,7 @@
         url('../assets/fonts/Fira-Sans-BlackItalic.woff') format('woff'),
         url('../assets/fonts/Fira-Sans-BlackItalic.ttf') format('truetype'),
         url('../assets/fonts/Fira-Sans-BlackItalic.svg#FiraSans-BlackItalic') format('svg');
+    font-display: swap;
     font-weight: 900;
     font-style: italic;
 }
