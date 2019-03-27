@@ -220,9 +220,9 @@ The device lab test for the OBA application was not very useful, since the app f
 
 ## Future enhancements
 
-* [X] Add ability to add more than 4 options. (**Major**)
-* [ ] Add long polling for situation where Sockets is not loaded for some reason. (**Medium**)
-* [ ] Add scaling to the graph. (**Medium**)
+* [X] Add ability to add more than 4 options. (**Major**).
+* [ ] Add long polling for situation where Sockets is not loaded for some reason. (**Medium**).
+* [ ] Add scaling to the graph. (**Medium**).
 
 ## License
 
