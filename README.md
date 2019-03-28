@@ -10,9 +10,11 @@ The key aspects for this app are highlighted, because they influenced my design 
 The app contains two parts, one for the **teacher** and one for the **student**. It should be clear which part of the application is intended for who (the student just has to scan the QRCode or follow the link).
 
 **Core functionality**
+
 The core functionality of this application is to provide the teachers (or anyone for that matter) with a way to ask other people a question and view the results of what is being voted in a (semi-)live and thus real-time fashion.
 
 **Disclaimer**
+
 This app might or might not work below IE6, the DOM manipulation guides of these old browsers are so vague it gave me a headache.
 Massive respect for the people that ruined their life trying to make something out of JavaScript in the pre-IE6 era.
 
@@ -170,8 +172,13 @@ The device lab test for the OBA application was not very useful, since the app f
 
 #### HTML
 
-* `<meta http-equiv="refresh" content="5">`
 * [Input type: number](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number). Supported from IE10.
+
+* [Main HTML element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main). Supported from Edge.
+
+* [Meta refresh](https://css-tricks.com/snippets/html/meta-refresh/). Supported in all major browsers. There is a quirk with this, that you can't remove this runtime, which required me to wrap it in a set of `noscript` tags, because otherwise the browser would keep refreshing even if you would have Sockets.
+
+* [Section HTML element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section). Supported from IE9.
 
 #### CSS
 
