@@ -240,6 +240,7 @@ The device lab test for the OBA application was not very useful, since the app f
 * [ ] Add scaling to the graph. (**Medium**).
 * [ ] Add support for polling multiple questions at once (**Major**).
 * [ ] Fix memory leak caused by Socket.io updating every score window for every update (**Medium**).
+* [ ] Fix styling on legacy browsers.
 
 ## Checklist
 
