@@ -1,10 +1,12 @@
 if (canMakeUseOfJavaScript()) {
-    var socket = io()
+    if (io && typeof io === 'function') {
+        var socket = io()
 
-    var forms = document.getElementsByTagName('form')
-    for (var i = 0; i < forms.length; i++) {
-        if (forms[i].hasAttribute('data-room-id') && forms[i].hasAttribute('data-answer-id')) {
-            forms[i].onsubmit = onFormSubmit(forms[i])
+        var forms = document.getElementsByTagName('form')
+        for (var i = 0; i < forms.length; i++) {
+            if (forms[i].hasAttribute('data-room-id') && forms[i].hasAttribute('data-answer-id')) {
+                forms[i].onsubmit = onFormSubmit(forms[i])
+            }
         }
     }
 }
