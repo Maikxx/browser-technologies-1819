@@ -46,7 +46,9 @@ Massive respect for the people that ruined their life trying to make something o
         4. [JavaScript Extra](#JavaScript-Extra)
 3. [Future enhancements](#Future-enhancements)
 4. [Checklist](#Checklist)
-5. [License](#License)
+5. [Browser tests](#Browser-tests)
+6. [Device Lab Application test](#Device-Lab-Application-test)
+7. [License](#License)
 
 ### Installation
 
@@ -300,6 +302,11 @@ When looking at IE11, the application works pretty much as expected, except for 
 ![Broken styling IE11](./docs/application/broken-ie-11-score-page.png)
 
 In Brave, Google Chrome, Firefox, Safari and TorBrowser (with JavaScript and a major delay due to the VPN) it works as intended.
+
+## Device Lab Application test
+
+The device lab is broken again, so I decided to only test this application on the big Windows Surface thing.
+On that device the application works as expected.
 
 ## License
 
