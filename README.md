@@ -276,6 +276,31 @@ The device lab test for the OBA application was not very useful, since the app f
 
     This app does not make use of cookies and / or localStorage.
 
+## Browser tests
+
+I have tested this application on a couple of browsers:
+
+* VirtualBox Internet Explorer (**5 - 10**)
+* VirtualBox Edge
+* Google Chrome (**latest**)
+* Firefox (**latest**)
+* Brave Browser (**latest**)
+* TorBrowser (**latest**)
+* Safari (**latest**)
+
+As you can see in the screenshots below, Internet Explorer just breaks all over the place on styling. I might or might not have time anymore to fix some of these.
+The target browser I was going for was IE6 and up. As far as I could test, you can still perform the core functionalities in IE7 (IE6 somehow does not get it's own version on VirtualBox).
+
+![Broken IE7 browser](./docs/application/broken-ie-7-1.png)
+![Broken IE7 browser](./docs/application/broken-ie-7-2.png)
+![Broken IE7 browser](./docs/application/broken-ie-7-3.png)
+
+When looking at IE11, the application works pretty much as expected, except for the fact that flexbox is not supported, as you can see below.
+
+![Broken styling IE11](./docs/application/broken-ie-11-score-page.png)
+
+In Brave, Google Chrome, Firefox, Safari and TorBrowser (with JavaScript and a major delay due to the VPN) it works as intended.
+
 ## License
 
 This repository is licensed as [MIT](LICENSE) by [Maikel van Veen](https://github.com/maikxx).
