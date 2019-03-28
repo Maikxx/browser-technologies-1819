@@ -305,8 +305,9 @@ In Brave, Google Chrome, Firefox, Safari and TorBrowser (with JavaScript and a m
 
 ## Device Lab Application test
 
-The device lab is broken again, so I decided to only test this application on the big Windows Surface thing.
-On that device the application works as expected.
+When testing on the device lab, the application worked as it should on most of the devices, the styling looked pretty much fine, with the exception of a few quirks. You can see the proof that I did this below...
+
+![Device lab test](./docs/application/device-lab-test.jpeg)
 
 ## License
 
