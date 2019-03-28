@@ -176,18 +176,23 @@ The device lab test for the OBA application was not very useful, since the app f
 * [VW/VH Unit](https://developer.mozilla.org/en-US/docs/Web/CSS/length).
 
     [Supported from IE9](https://caniuse.com/#search=vw).
+
 * [CH Unit](https://developer.mozilla.org/en-US/docs/Web/CSS/length).
 
     [Supported from IE9](https://www.quirksmode.org/css/units-values/#t00).
+
 * [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/flex).
 
     [Effectively supported from Edge](https://caniuse.com/#search=display%3A%20flex). Unfortunately I was told not to prefix CSS, which causes Internet Explorer to not work with flexbox.
+
 * [CSS3 Selectors](https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector).
 
     [Fully supported from IE9](https://caniuse.com/#feat=css-sel3).
+
 * [CSS3 Colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color).
 
     [Supported from IE9](https://caniuse.com/#feat=css3-colors).
+
 * [Web Fonts](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face).
 
     [Fully supported from IE9](https://caniuse.com/#feat=fontface).
@@ -197,21 +202,27 @@ The device lab test for the OBA application was not very useful, since the app f
 * [element.getElementsByClassName](https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByClassName).
 
     [Supported from IE9](https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByClassName#Browser_compatibility).
+
 * [element.getElementsByTagName / element.appendChild / element.setAttribute / element.className](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html).
 
     [Supported from IE6](https://caniuse.com/#search=DOM%20core%20level%202).
+
 * [element.querySelector / element.querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector).
 
     [Supported from IE8/IE9](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector#Browser_compatibility).
+
 * [Location API](https://developer.mozilla.org/en-US/docs/Web/API/Location).
 
     [Supported as intended from Firefox 22](https://developer.mozilla.org/en-US/docs/Web/API/Location#Browser_compatibility).
+
 * [Node.innerText](https://html.spec.whatwg.org/multipage/dom.html#the-innertext-idl-attribute).
 
     [Supported from IE6 and Firefox 44](https://caniuse.com/#feat=innertext).
+
 * [Node.textContent](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent).
 
     [Supported from IE9](https://caniuse.com/#search=textContent).
+
 * [String.prototype methods](https://www-archive.mozilla.org/js/language/E262-3.pdf).
 
     [Supported from IE6](https://caniuse.com/#search=EcmaScript%203%20String.prototype%20methods).

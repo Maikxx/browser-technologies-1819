@@ -9,7 +9,9 @@ if (canMakeUseOfJavaScript()) {
 
     if (addMoreOptionsForm) {
         attachEventToElement(addMoreOptionsForm, 'submit', function (event) {
-            event.preventDefault()
+            if (event.preventDefault) {
+                event.preventDefault()
+            }
 
             if (questionFormFieldset && lastQuestionFormInput) {
                 var labelElement = document.createElement('label')
@@ -27,6 +29,8 @@ if (canMakeUseOfJavaScript()) {
                 questionFormFieldset.appendChild(labelElement)
                 questionFormFieldset.appendChild(inputElement)
             }
+
+            return false
         })
     }
 }
