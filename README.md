@@ -13,6 +13,19 @@ The app contains two parts, one for the **teacher** and one for the **student**.
 
 The core functionality of this application is to provide the teachers (or anyone for that matter) with a way to ask other people a question and view the results of what is being voted in a (semi-)live and thus real-time fashion.
 
+**Reliable**
+
+The user must be able to trust the statistics of the live-graph.
+
+**Usable**
+
+It must be accessible for pretty much everyone, regarding disability or browser.
+
+**Pleasurable**
+
+Add real real-time statistics when JavaScript is enabled and when the user uses a normal browser.
+Actually show decent styling and transitions on certain events.
+
 **Disclaimer**
 
 This app might or might not work below IE6, the DOM manipulation guides of these old browsers are so vague it gave me a headache.
