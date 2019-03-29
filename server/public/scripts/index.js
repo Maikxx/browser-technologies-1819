@@ -28,6 +28,7 @@ if (canMakeUseOfJavaScript()) {
 
                 questionFormFieldset.appendChild(labelElement)
                 questionFormFieldset.appendChild(inputElement)
+                nextQuestionFormInputNumber++
             }
 
             return false
