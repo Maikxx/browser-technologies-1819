@@ -12,7 +12,7 @@ export function getIndexRoute(request: Express.Request, response: Express.Respon
     const { ioc } = request.query as { ioc?: string }
     let nextIoc: number
 
-    if (ioc && typeof Number(ioc) === 'number' && Number(ioc) > 1 && Number(ioc) < 4) {
+    if (ioc && typeof Number(ioc) === 'number' && Number(ioc) > 0 && Number(ioc) < 5) {
         nextIoc = state.currentIoc + (Number(ioc) || 0)
         state.currentIoc = nextIoc
     } else {
