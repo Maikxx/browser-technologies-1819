@@ -45,14 +45,17 @@ function updateGraph(graphBar, counter) {
         }
 
         var parent = graphBar.parentElement
-        var amountElement = parent.children[2]
 
-        var counterElementText = counter.innerText
-        setTextContentOfElement(counter, '+ ' + Number((Number(counterElementText.replace('+ ', '')) || 0) + 1))
+        if (parent) {
+            var amountElement = parent.children[2]
 
-        if (amountElement) {
-            var amountElementText = amountElement.innerText
-            setTextContentOfElement(amountElement, Number(amountElementText) + 1)
+            var counterElementText = counter.innerText
+            setTextContentOfElement(counter, '+ ' + Number((Number(counterElementText.replace('+ ', '')) || 0) + 1))
+
+            if (amountElement) {
+                var amountElementText = amountElement.innerText
+                setTextContentOfElement(amountElement, Number(amountElementText) + 1)
+            }
         }
     }
 }
