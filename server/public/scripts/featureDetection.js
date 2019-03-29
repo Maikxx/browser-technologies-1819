@@ -29,7 +29,7 @@ function attachEventToElement(element, event, callback) {
     if ('addEventListener' in element) {
         element.addEventListener(event, callback)
     } else if ('attachEvent' in element) {
-        element.attachEvent(event, callback)
+        element.attachEvent('on' + event, callback)
     } else {
         throw new Error('Cannot set event listener on element...')
     }
