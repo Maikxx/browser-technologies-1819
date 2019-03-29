@@ -4,19 +4,23 @@ if (canMakeUseOfJavaScript()) {
     new QRCode(document.getElementById('qrcode'), joinUrl)
 
     const qrCodeImage = document.getElementsByTagName('img')[0]
-    qrCodeImage.alt = 'Scan this QR code to join the poll'
+    if (qrCodeImage) {
+        qrCodeImage.alt = 'Scan this QR code to join the poll'
 
-    var timeToWaitInSeconds = 90 * 1000
-    var countDownDate = new Date().getTime() + timeToWaitInSeconds
-    var interval = setInterval(function() {
-        var now = new Date().getTime()
-        var duration = countDownDate - now
+        var timeToWaitInSeconds = 90 * 1000
+        var timer = document.getElementById('countdown-timer')
+        var countDownDate = new Date().getTime() + timeToWaitInSeconds
+        if (timer) {
+            var interval = setInterval(function() {
+                var now = new Date().getTime()
+                var duration = countDownDate - now
+                setTextContentOfElement(timer, Math.round(duration / 1000))
 
-        setTextContentOfElement(document.getElementById('countdown-timer'), Math.round(duration / 1000))
-
-        if (duration < 0) {
-            clearInterval(interval)
-            window.location.replace(href + '/score')
+                if (duration < 0) {
+                    clearInterval(interval)
+                    window.location.replace(href + '/score')
+                }
+            }, 1000)
         }
-    }, 1000)
+    }
 }

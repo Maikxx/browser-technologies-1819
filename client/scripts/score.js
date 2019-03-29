@@ -21,36 +21,38 @@ function onScoreAdded(data) {
 
     var graphBars = getHtmlElementsByClass('ScoreListOption__graph-bar')
     var counters = getHtmlElementsByClass('ScoreListOption__incrementor')
-    for (var i = 0; i < graphBars.length; i++) {
-        if (!graphBars[i]
-            || !graphBars[i].hasAttribute('data-answer-id')
-            || graphBars[i].getAttribute('data-answer-id') !== data.answerId
-        ) {
-            continue
-        }
+    if (graphBars && graphBars.length > 0 && counters && counters.length > 0) {
+        for (var i = 0; i < graphBars.length; i++) {
+            if (!graphBars[i]
+                || !graphBars[i].hasAttribute('data-answer-id')
+                || graphBars[i].getAttribute('data-answer-id') !== data.answerId
+            ) {
+                continue
+            }
 
-        updateGraph(graphBars[i], counters[i])
+            updateGraph(graphBars[i], counters[i])
+        }
     }
 }
 
 function updateGraph(graphBar, counter) {
-    var currentHeight = Number(graphBar.style.height.replace('px', ''))
-    graphBar.style.height = currentHeight + 10 + 'px'
+    if (graphBar && counter) {
+        var currentHeight = Number(graphBar.style.height.replace('px', ''))
+        graphBar.style.height = currentHeight + 10 + 'px'
 
-    if (graphBar.className.indexOf('animate') < 0) {
-        graphBar.className = graphBar.className + ' animate'
-    }
+        if (graphBar.className.indexOf('animate') < 0) {
+            graphBar.className = graphBar.className + ' animate'
+        }
 
-    var parent = graphBar.parentElement
-    var amountElement = parent.children[2]
+        var parent = graphBar.parentElement
+        var amountElement = parent.children[2]
 
-    if (counter) {
         var counterElementText = counter.innerText
         setTextContentOfElement(counter, '+ ' + Number((Number(counterElementText.replace('+ ', '')) || 0) + 1))
-    }
 
-    if (amountElement) {
-        var amountElementText = amountElement.innerText
-        setTextContentOfElement(amountElement, Number(amountElementText) + 1)
+        if (amountElement) {
+            var amountElementText = amountElement.innerText
+            setTextContentOfElement(amountElement, Number(amountElementText) + 1)
+        }
     }
 }
