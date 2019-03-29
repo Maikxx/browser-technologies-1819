@@ -302,7 +302,7 @@ The device lab test for the OBA application was not very useful, since the app f
 
 I have tested this application on a couple of browsers:
 
-* VirtualBox Internet Explorer (**5 - 10**)
+* VirtualBox Internet Explorer (**5 - 11**)
 * VirtualBox Edge
 * Google Chrome (**latest**)
 * Firefox (**latest**)
